@@ -14,6 +14,7 @@ const IndexPage = () => {
         className="hero-section min-h-screen w-[100%] object-contain flex justify-center items-center"
       >
         <div className="text-white tracking-wider w-6/12 grid place-content-center text-center">
+			  
           <div className="text-6xl uppercase tracking-widest animate-fadeInDown">
             Wahaj Haider
           </div>
