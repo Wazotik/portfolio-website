@@ -1,3 +1,6 @@
+import "./src/styles/global.css";
+import "typeface-poppins";
+import "typeface-karla";
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
