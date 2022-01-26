@@ -14,13 +14,10 @@ const IndexPage = () => {
         className="hero-section min-h-screen w-[100%] object-contain flex justify-center items-center"
       >
         <div className="text-white tracking-wider w-6/12 grid place-content-center text-center">
-			  
-          <div className="text-6xl uppercase tracking-widest animate-fadeInDown">
+          <div className="text-6xl uppercase tracking-widest">
             Wahaj Haider
           </div>
-          <div className="text-2xl tracking-wider pl-11 pr-11 animate-fadeInUp">
-            Short summary of Wahaj here
-          </div>
+          <div className="text-2xl pl-11 pr-11">Aspiring full stack developer who loves to create and innovate</div>
         </div>
       </div>
       <section
@@ -30,9 +27,9 @@ const IndexPage = () => {
         <div className="w-8/12 flex flex-row justify-center items-center pt-20 pb-20 pr-40 pl-40 gap-20">
           <div className="grid place-content-center">
             <img
-              src={require("../images/wahaj-pic.png").default}
+              src={require("../images/wahaj-face-pic.jpg").default}
               alt=""
-              className="max-w-[300px] rounded-full m-0"
+              className="max-w-[300px] rounded-2xl m-0"
             />
           </div>
           <div className="grid place-content-center">
