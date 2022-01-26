@@ -18,7 +18,7 @@ const Header = () => {
             <a href="#about">About</a>
           </li>
           <li className="grid place-content-center">
-            <Link to="/projects">Projects</Link>
+				<a href="#projects">Projects</a>
           </li>
           <li className="grid place-content-center">
             <a href="">Resume</a>
