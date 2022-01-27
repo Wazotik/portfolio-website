@@ -4,8 +4,9 @@ import { Link } from "gatsby"
 
 import HomeLayout from "../components/HomeLayout"
 import Projects from "./projects"
-import { CgWebsite } from "react-icons/cg";
-import { AiFillGithub, AiOutlineGithub } from "react-icons/ai";
+import { CgWebsite } from "react-icons/cg"
+import { AiFillGithub, AiOutlineGithub } from "react-icons/ai"
+import Seo from "../components/seo"
 
 const IndexPage = () => {
   return (
@@ -76,24 +77,36 @@ const IndexPage = () => {
                 />
               </div>
               <div className="flex flex-col flex-1">
-                <h4 className="mb-0 text-lg">Heart-Watch</h4>
+                <h4 className="mb-1 text-lg">Heart-Watch</h4>
                 <p className="m-0 text-sm leading-5">
                   A website providing an overview for Heart-Watch, a mobile
                   application providing a modern and simple solution for
                   cardiovascular disease prevention and protection.
-						<div className="italic mt-2">
-							This project was submitted to DeltaHacks 8.
-						</div>
+                  <div className="italic mt-2">
+                    This project was submitted to DeltaHacks 8.
+                  </div>
                 </p>
               </div>
               <div className="flex flex-row flex-1 justify-center items-end">
-                <a className="flex flex-1 justify-center" target="_blank" href="https://heartwatch.tech/">
-					 	<span className="grid place-content-center mr-1"><CgWebsite /></span>
-						Live Demo
+                <a
+                  className="flex flex-1 justify-center"
+                  target="_blank"
+                  href="https://heartwatch.tech/"
+                >
+                  <span className="grid place-content-center mr-1">
+                    <CgWebsite />
+                  </span>
+                  Live Demo
                 </a>
-                <a className="flex flex-1 justify-center" target="_blank" href="https://heartwatch.tech/">
-						<span className="grid place-content-center mr-1"><AiFillGithub /></span>
-						GitHub
+                <a
+                  className="flex flex-1 justify-center"
+                  target="_blank"
+                  href="https://heartwatch.tech/"
+                >
+                  <span className="grid place-content-center mr-1">
+                    <AiFillGithub />
+                  </span>
+                  GitHub
                 </a>
               </div>
             </div>
