@@ -3,14 +3,19 @@ import { useState } from "react"
 import { Link } from "gatsby"
 
 import HomeLayout from "../components/HomeLayout"
-import Projects from "./projects"
 import { CgWebsite } from "react-icons/cg"
 import { AiFillGithub, AiOutlineGithub } from "react-icons/ai"
 import Seo from "../components/seo"
+import { Helmet } from "react-helmet";
 
 const IndexPage = () => {
   return (
     <HomeLayout>
+      <Helmet>
+        <html lang="en" />
+        <title>Wahaj Haider</title>
+        <meta name="description" content="Wahaj Haider's personal portfolio website" />
+      </Helmet>
       <div
         id="home"
         className="hero-section min-h-screen w-[100%] object-contain flex justify-center items-center"
