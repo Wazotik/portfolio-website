@@ -29,7 +29,7 @@ const Header = () => {
 				</div>
 				<div className="flex flex-1 justify-end">
 					<li className="">
-						<Link className="border-solid bg-[#2b2b2b]/50 hover:bg-[#2b2b2b] p-2 pr-5 pl-5 rounded-md" href="/contact">Contact</Link>
+						<Link className="border-solid bg-[#2b2b2b]/80 hover:bg-[#2b2b2b] p-2 pr-5 pl-5 rounded-md transition-colors duration-300" href="/contact">Contact</Link>
 					</li>
 				</div>
         </ul>

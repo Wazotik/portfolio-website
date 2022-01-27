@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 
 import HomeLayout from "../components/HomeLayout"
 import Projects from "./projects"
+import { CgWebsite } from "react-icons/cg";
+import { AiFillGithub, AiOutlineGithub } from "react-icons/ai";
 
 const IndexPage = () => {
   return (
@@ -86,10 +88,12 @@ const IndexPage = () => {
               </div>
               <div className="flex flex-row flex-1 justify-center items-end">
                 <a className="flex flex-1 justify-center" target="_blank" href="https://heartwatch.tech/">
-                  Live Demo
+					 	<span className="grid place-content-center mr-1"><CgWebsite /></span>
+						Live Demo
                 </a>
                 <a className="flex flex-1 justify-center" target="_blank" href="https://heartwatch.tech/">
-						 GitHub
+						<span className="grid place-content-center mr-1"><AiFillGithub /></span>
+						GitHub
                 </a>
               </div>
             </div>
