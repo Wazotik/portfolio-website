@@ -15,7 +15,7 @@ import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   return (
-    <HomeLayout>
+    <HomeLayout visisbleHeader={true}>
       <Helmet>
         <html lang="en" />
         <title>Wahaj Haider</title>
