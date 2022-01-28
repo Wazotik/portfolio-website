@@ -15,6 +15,7 @@ const Contact = () => {
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
+			 <div className="text-center text-4xl">Let's get in touch!</div>
           <div className="flex flex-col">
             <label htmlFor="name" className="mb-1">
               Name
