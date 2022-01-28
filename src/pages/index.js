@@ -4,14 +4,18 @@ import { Link } from "gatsby"
 
 import HomeLayout from "../components/HomeLayout"
 import { CgWebsite } from "react-icons/cg"
-import { AiFillGithub, AiOutlineGithub } from "react-icons/ai"
+import {
+  AiFillGithub,
+  AiOutlineGithub,
+  AiOutlineLinkedin,
+  AiOutlineInstagram,
+} from "react-icons/ai"
 import Seo from "../components/seo"
 import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   return (
     <HomeLayout>
-
       <Helmet>
         <html lang="en" />
         <title>Wahaj Haider</title>
@@ -23,14 +27,31 @@ const IndexPage = () => {
 
       <div
         id="home"
-        className="hero-section min-h-screen w-[100%] object-contain flex justify-center items-center"
+        className="hero-section min-h-screen w-[100%] object-contain flex justify-center items-center text-white"
       >
-        <div className="text-white w-6/12 grid place-content-center text-center">
-          <div className="text-7xl uppercase tracking-widest shadow-sm">
-            Wahaj Haider
+        <div className="flex"></div>
+        <div className="flex flex-1 justify-center items-center">
+          <div className="text-white w-6/12 grid place-content-center text-center">
+            <div className="text-7xl uppercase tracking-widest shadow-sm">
+              Wahaj Haider
+            </div>
+            <div className="text-2xl tracking-wide">
+              Aspiring Full Stack Developer with a passion to create and
+              innovate
+            </div>
           </div>
-          <div className="text-2xl pl-8 pr-8 tracking-wide">
-            Aspiring Full Stack Developer with a passion to create and innovate
+        </div>
+        <div className="flex justify-end items-center">
+          <div className="flex flex-col gap-6 mr-5 items-center">
+            <a target="_blank" href="https://github.com/Wazotik">
+              <AiOutlineGithub size={36} />
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/wahajh/">
+              <AiOutlineLinkedin size={36} />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/wahaj.haider21/">
+              <AiOutlineInstagram size={36} />
+            </a>
           </div>
         </div>
       </div>
@@ -100,11 +121,9 @@ const IndexPage = () => {
                   </div>
                 </p>
               </div>
-					<div className="mt-3">
-						<b>
-						Built using JavaScript, Gatsby (React), HTML, CSS.
-						</b>
-					</div>
+              <div className="mt-3">
+                <b>Built using JavaScript, Gatsby (React), HTML, CSS.</b>
+              </div>
               <div className="flex flex-row flex-1 justify-center items-end">
                 <a
                   className="flex flex-1 justify-center"
@@ -142,19 +161,17 @@ const IndexPage = () => {
                   <span className="text-sm">(including a Weather app)</span>
                 </h4>
                 <p className="m-0 text-sm leading-5">
-                  An informative guide for people those who want to get started with React and Express. I was responsible for completing a
-                  demo page that used both technologies and
-                  a walkthrough for creating that demo page. For the demo
-                  page, I decided to built a weather app providing up-to-date
-                  weather data based on a user's location.{" "}
+                  An informative guide for people those who want to get started
+                  with React and Express. I was responsible for completing a
+                  demo page that used both technologies and a walkthrough for
+                  creating that demo page. For the demo page, I decided to built
+                  a weather app providing up-to-date weather data based on a
+                  user's location.{" "}
                 </p>
               </div>
-					<div className="mt-3">
-						<b>
-						Built using JavaScript, React,
-						Express, HTML, CSS.
-						</b>
-					</div>
+              <div className="mt-3">
+                <b>Built using JavaScript, React, Express, HTML, CSS.</b>
+              </div>
               <div className="flex flex-row flex-1 justify-center items-end">
                 <a
                   className="flex flex-1 justify-center"
