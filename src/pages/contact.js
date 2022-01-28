@@ -7,14 +7,18 @@ const Contact = () => {
     <HomeLayout visisbleHeader={false}>
       <div className="grid place-items-center min-h-screen">
         <form
-          action="POST"
+          method="post"
+          netlify-honeypot="bot-field"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
           name="contact"
           className="w-4/12 flex flex-col p-10 gap-7"
         >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-col">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name" className="mb-1">
+              Name
+            </label>
             <input
               type="text"
               name="name"
@@ -24,7 +28,9 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="mb-1">
+              Email
+            </label>
             <input
               type="email"
               name="email"
@@ -34,7 +40,9 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="mb-1">
+              Message
+            </label>
             <textarea
               name="message"
               id="message"
