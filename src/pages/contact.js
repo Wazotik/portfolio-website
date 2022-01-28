@@ -8,7 +8,9 @@ const Contact = () => {
       <div className="grid place-items-center min-h-screen">
         <form
           action="POST"
-			 data-netlify="true"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          name="contact"
           className="w-4/12 flex flex-col p-10 gap-7"
         >
           <div className="flex flex-col">
@@ -16,7 +18,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-				  id="name"
+              id="name"
               className="border-solid border-2 border-[#2b2b2b] pt-1 pb-1 pr-3 pl-3 text-sm rounded-md"
               required
             />
@@ -26,7 +28,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-				  id="email"
+              id="email"
               className="border-solid border-2 border-[#2b2b2b] pt-1 pb-1 pr-3 pl-3 text-sm rounded-md"
               required
             />
@@ -35,15 +37,15 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
-				  id="message"
+              id="message"
               placeholder="please be nice :)"
               className="border-solid border-2 border-[#2b2b2b] p-3 text-sm rounded-md"
               required
             ></textarea>
           </div>
-			 <div className="flex">
-			 	<div data-netlify-recaptcha="true"></div>
-			 </div>
+          <div className="flex">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
           <div className="flex flex-col justify-end items-center">
             <button
               type="submit"
