@@ -6,7 +6,7 @@ import HomeLayout from "../components/HomeLayout"
 import { CgWebsite } from "react-icons/cg"
 import { AiFillGithub, AiOutlineGithub } from "react-icons/ai"
 import Seo from "../components/seo"
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   return (
@@ -14,17 +14,22 @@ const IndexPage = () => {
       <Helmet>
         <html lang="en" />
         <title>Wahaj Haider</title>
-        <meta name="description" content="Wahaj Haider's personal portfolio website" />
+        <meta
+          name="description"
+          content="Wahaj Haider's personal portfolio website"
+        />
       </Helmet>
       <div
         id="home"
         className="hero-section min-h-screen w-[100%] object-contain flex justify-center items-center"
       >
         <div className="text-white w-6/12 grid place-content-center text-center">
-          <div className="text-6xl uppercase tracking-wider">Wahaj Haider</div>
-          <div className="text-2xl pl-11 pr-11 tracking-wide">
-            Aspiring Full Stack Developer with a passion to create and innovate
+          <div className="text-6xl uppercase tracking-widest shadow-sm">
+            Wahaj Haider
           </div>
+          {/* <div className="text-2xl pl-11 pr-11 tracking-wide">
+            Aspiring Full Stack Developer with a passion to create and innovate
+          </div> */}
         </div>
       </div>
       <section
@@ -57,8 +62,8 @@ const IndexPage = () => {
                 <b>CSS</b>, <b>React</b>, <b>Express.js</b>, <b>SQL</b>, etc.
                 I'm also proficient in other languages such as <b>Java</b> and{" "}
                 <b>Python</b>. I plan to further extend my knowledge by
-                exploring more frontend technologies/frameworks and diving
-                deeper into the backend side of things.
+                exploring more front-end technologies/frameworks and diving
+                deeper into the back-end side of things.
               </p>
             </div>
           </div>
@@ -73,7 +78,7 @@ const IndexPage = () => {
             Projects
           </div>
           <div className="flex justify-around items-center w-[100%] flex-wrap">
-            <div className="border-solid border-4 border-[#2b2b2b] w-64 h-[26rem] rounded-xl mr-10 ml-10 flex flex-col p-3 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[30rem] rounded-xl mr-10 ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
               <div className="flex flex-col flex-0 justify-start items-center">
                 <img
                   className="shadow-sm mb-3 rounded-t-md"
@@ -106,7 +111,55 @@ const IndexPage = () => {
                 <a
                   className="flex flex-1 justify-center"
                   target="_blank"
-                  href="https://heartwatch.tech/"
+                  href="https://github.com/Wazotik/heart-watch-DeltaHacks8-2021"
+                >
+                  <span className="grid place-content-center mr-1">
+                    <AiFillGithub />
+                  </span>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[30rem] rounded-xl mr-10 ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+              <div className="flex flex-col flex-0 justify-start items-center">
+                <img
+                  className="shadow-sm mb-3 rounded-t-md"
+                  src={require("../images/react-guide-screenshot.png").default}
+                  alt="Weather app img"
+                />
+              </div>
+              <div className="flex flex-col flex-1">
+                <h4 className="mb-1 text-lg leading-5">
+                  React and Express Guide{" "}
+                  <span className="text-sm">(including a Weather app)</span>
+                </h4>
+                <p className="m-0 text-sm leading-5">
+                  An informative guide for people who want to get started with React and Express. I was responsible for a
+                  demo page that used both technologies and
+                  a walkthrough for creating that demo page. For the demo
+                  page, I decided to built a weather app providing up-to-date
+                  weather data based on a user's location.{" "}
+                  <b>
+                    The website/weather app was built using JavaScript, React,
+                    Express, HTML, CSS.
+                  </b>
+                </p>
+              </div>
+              <div className="flex flex-row flex-1 justify-center items-end">
+                <a
+                  className="flex flex-1 justify-center"
+                  target="_blank"
+                  href="https://cps530-final-project.netlify.app/"
+                >
+                  <span className="grid place-content-center mr-1">
+                    <CgWebsite />
+                  </span>
+                  Live Demo
+                </a>
+                <a
+                  className="flex flex-1 justify-center"
+                  target="_blank"
+                  href="https://github.com/Wazotik/heart-watch-DeltaHacks8-2021"
                 >
                   <span className="grid place-content-center mr-1">
                     <AiFillGithub />
