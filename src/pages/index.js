@@ -35,10 +35,10 @@ const IndexPage = () => {
             <div className="text-7xl uppercase tracking-widest shadow-sm">
               Wahaj Haider
             </div>
-            <div className="text-2xl tracking-wide">
+            {/* <div className="text-2xl tracking-wide">
               Aspiring Full Stack Developer with a passion to create and
               innovate
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex justify-end items-center">
