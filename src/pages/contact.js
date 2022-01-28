@@ -12,27 +12,30 @@ const Contact = () => {
           className="w-4/12 flex flex-col p-10 gap-7"
         >
           <div className="flex flex-col">
-            <label className="">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
+				  id="name"
               className="border-solid border-2 border-[#2b2b2b] pt-1 pb-1 pr-3 pl-3 text-sm rounded-md"
               required
             />
           </div>
           <div className="flex flex-col">
-            <label>Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               name="email"
+				  id="email"
               className="border-solid border-2 border-[#2b2b2b] pt-1 pb-1 pr-3 pl-3 text-sm rounded-md"
               required
             />
           </div>
           <div className="flex flex-col">
-            <label>Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               name="message"
+				  id="message"
               placeholder="please be nice :)"
               className="border-solid border-2 border-[#2b2b2b] p-3 text-sm rounded-md"
               required
