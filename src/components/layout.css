@@ -23,8 +23,17 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2b2b;
+}
+
+
 article,
 aside,
 details,
@@ -605,4 +614,12 @@ pre tt:after {
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) ,url('../images/wahaj-main-pic.png') center center/cover no-repeat;
   background-attachment: fixed;
+}
+
+.main-container {
+  flex: 1 1 0;
+}
+
+.name-container {
+  flex: 2 1 0;
 }

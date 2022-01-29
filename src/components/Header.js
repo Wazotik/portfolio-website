@@ -12,7 +12,7 @@ const Header = () => {
 				<div className="flex flex-1 justify-around">
 					<li className="">
 						<a className="" href="#home">
-						Home
+							Wahaj Haider
 						</a>
 					</li>
 					<li className="">

@@ -27,12 +27,12 @@ const IndexPage = () => {
 
       <div
         id="home"
-        className="hero-section min-h-screen w-[100%] object-contain flex justify-center items-center text-white"
+        className="hero-section min-h-screen w-[100%] object-contain flex flex-col md:flex-row justify-center items-center text-white"
       >
-        <div className="flex"></div>
-        <div className="flex flex-1 justify-center items-center">
-          <div className="text-white w-6/12 grid place-content-center text-center">
-            <div className="text-7xl uppercase tracking-widest shadow-sm">
+        <div className="flex main-container"></div>
+        <div className="flex justify-center items-center w-5/12 name-container">
+          <div className="text-white grid place-content-center text-center">
+            <div className="text-6xl md:text-7xl uppercase tracking-widest shadow-sm">
               Wahaj Haider
             </div>
             {/* <div className="text-2xl tracking-wide">
@@ -41,16 +41,16 @@ const IndexPage = () => {
             </div> */}
           </div>
         </div>
-        <div className="flex justify-end items-center">
-          <div className="flex flex-col gap-6 mr-5 items-center">
+        <div className="flex justify-end items-center main-container">
+          <div className="flex flex-row md:flex-col gap-10 mb-5 md:mb-0 md:mr-5 items-center text-3xl">
             <a target="_blank" href="https://github.com/Wazotik">
-              <AiOutlineGithub size={36} />
+              <AiOutlineGithub />
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/wahajh/">
-              <AiOutlineLinkedin size={36} />
+              <AiOutlineLinkedin  />
             </a>
             <a target="_blank" href="https://www.instagram.com/wahaj.haider21/">
-              <AiOutlineInstagram size={36} />
+              <AiOutlineInstagram />
             </a>
           </div>
         </div>
@@ -97,12 +97,12 @@ const IndexPage = () => {
         id="projects"
         className="bg-white flex justify-center items-center"
       >
-        <div className="w-11/12 flex flex-col justify-center items-center pt-20 pb-20 pr-40 pl-40 gap-20">
-          <div className="text-5xl tracking-wider mb-5 text-center">
+        <div className="w-11/12 flex flex-col justify-center items-center pt-20 pb-20 md:pr-40 md:pl-40 md:gap-20 gap-10">
+          <div className="text-5xl tracking-wider md:mb-5 text-center">
             Projects
           </div>
-          <div className="flex justify-around items-center w-[100%] flex-wrap">
-            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl mr-10 ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+          <div className="flex gap-8 md:gap-0 justify-around items-center w-[100%] flex-wrap">
+            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl md:mr-10 md:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
               <div className="flex flex-col flex-0 justify-start items-center">
                 <img
                   className="shadow-sm mb-3 rounded-t-md"
@@ -147,7 +147,7 @@ const IndexPage = () => {
                 </a>
               </div>
             </div>
-            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl mr-10 ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl md:mr-10 md:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
               <div className="flex flex-col flex-0 justify-start items-center">
                 <img
                   className="shadow-sm mb-3 rounded-t-md"
