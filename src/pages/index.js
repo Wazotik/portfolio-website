@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet"
 const IndexPage = () => {
   return (
     <HomeLayout visisbleHeader={true}>
+		 <Seo title={"Wahaj Haider"} />
       <Helmet>
         <html lang="en" />
         <title>Wahaj Haider</title>

@@ -12,7 +12,7 @@ module.exports = {
     title: ``,
     description: `My personal portfolio website`,
     author: `Wahaj Haider`,
-    siteUrl: `https://www.wahajhaider.ca/`,
+    siteUrl: `https://www.wahajhaider.ca`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
