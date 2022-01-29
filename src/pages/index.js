@@ -32,7 +32,7 @@ const IndexPage = () => {
         <div className="flex main-container"></div>
         <div className="flex justify-center items-center w-5/12 name-container">
           <div className="text-white grid place-content-center text-center">
-            <div className="text-6xl md:text-7xl uppercase tracking-widest shadow-sm">
+            <div className="text-5xl md:text-7xl uppercase tracking-widest shadow-sm">
               Wahaj Haider
             </div>
             {/* <div className="text-2xl tracking-wide">
