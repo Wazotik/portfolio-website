@@ -9,7 +9,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
-    title: ``,
+    title: `Wahaj Haider`,
     description: `My personal portfolio website`,
     author: `Wahaj Haider`,
     siteUrl: `https://www.wahajhaider.ca`,
