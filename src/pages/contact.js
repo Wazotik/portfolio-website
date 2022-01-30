@@ -5,13 +5,13 @@ import Layout from "../components/layout"
 const Contact = () => {
   return (
     <HomeLayout visisbleHeader={false}>
-      <div className="grid place-items-center min-h-screen">
+      <div className="flex justify-center items-center min-h-screen">
         <form
           method="post"
           netlify-honeypot="bot-field"
           data-netlify="true"
           name="contact"
-          className="w-4/12 flex flex-col p-10 gap-7"
+          className="md:min-w-[600px] flex flex-col md:p-10 gap-7"
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
