@@ -16,9 +16,10 @@ import { Helmet } from "react-helmet"
 const IndexPage = () => {
   return (
     <HomeLayout visisbleHeader={true}>
-      <Seo title={"Wahaj Haider"} />
+		{/* <Seo title={"Wahaj Haider"} /> */}
       <Helmet>
         <html lang="en" />
+        <title>Wahaj Haider</title>
         <meta
           name="description"
           content="Wahaj Haider's personal portfolio website"
@@ -47,7 +48,7 @@ const IndexPage = () => {
               <AiOutlineGithub />
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/wahajh/">
-              <AiOutlineLinkedin />
+              <AiOutlineLinkedin  />
             </a>
             <a target="_blank" href="https://www.instagram.com/wahaj.haider21/">
               <AiOutlineInstagram />
