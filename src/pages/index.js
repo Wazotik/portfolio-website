@@ -122,10 +122,10 @@ const IndexPage = () => {
                   </div>
                 </p>
               </div>
-              <div className="mt-3">
+              <div className="flex flex-1 mb-3 items-end">
                 <b>Built using JavaScript, Gatsby (React), HTML, CSS.</b>
               </div>
-              <div className="flex flex-row flex-1 justify-center items-end">
+              <div className="flex flex-row justify-center items-end">
                 <a
                   className="flex flex-1 justify-center"
                   target="_blank"
@@ -170,10 +170,10 @@ const IndexPage = () => {
                   user's location.{" "}
                 </p>
               </div>
-              <div className="mt-3">
+              <div className="flex flex-1 mb-3 items-end">
                 <b>Built using JavaScript, React, Express, HTML, CSS.</b>
               </div>
-              <div className="flex flex-row flex-1 justify-center items-end">
+              <div className="flex flex-row justify-center items-end">
                 <a
                   className="flex flex-1 justify-center"
                   target="_blank"
