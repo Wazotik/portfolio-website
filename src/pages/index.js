@@ -46,24 +46,22 @@ const IndexPage = () => {
             </div> */}
           </div>
         </div>
-        <Fade right>
-          <div className="flex justify-end items-center main-container">
-            <div className="flex flex-row md:flex-col gap-10 mb-5 md:mb-0 md:mr-5 items-center text-3xl">
-              <a target="_blank" href="https://github.com/Wazotik">
-                <AiOutlineGithub />
-              </a>
-              <a target="_blank" href="https://www.linkedin.com/in/wahajh/">
-                <AiOutlineLinkedin />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.instagram.com/wahaj.haider21/"
-              >
-                <AiOutlineInstagram />
-              </a>
-            </div>
+        <div className="flex justify-end items-center main-container">
+          <div className="flex flex-row md:flex-col gap-10 mb-5 md:mb-0 md:mr-5 items-center text-3xl">
+            <a target="_blank" href="https://github.com/Wazotik">
+              <AiOutlineGithub />
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/wahajh/">
+              <AiOutlineLinkedin />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/wahaj.haider21/"
+            >
+              <AiOutlineInstagram />
+            </a>
           </div>
-        </Fade>
+        </div>
       </div>
 
       <section
