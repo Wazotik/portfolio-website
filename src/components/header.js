@@ -48,7 +48,7 @@ const Header = () => {
 					</div>
 				</div>
 				
-				<div className={`top-0 right-0 fixed bg-[#2b2b2b] w-[100vw] h-screen z-10 ${sidebarOpen ? "translate-x-0" : "translate-x-full"} ease-in-out duration-300`}>
+				<div className={`top-0 right-0 fixed bg-[#2b2b2b] w-[100vw] h-screen z-50 ${sidebarOpen ? "translate-x-0" : "translate-x-full"} ease-in-out duration-300`}>
 					<div className="w-full h-screen p-7 flex flex-col">
 						<div className="flex justify-end cursor-pointer">
 							<ImCross className="" onClick={() => {setSidebarOpen(!sidebarOpen)}} size={26} />
