@@ -10,13 +10,14 @@ import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
 } from "react-icons/ai"
+import { HiOutlineDesktopComputer } from "react-icons/hi"
 import Seo from "../components/seo"
 import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   return (
     <HomeLayout visisbleHeader={true}>
-		{/* <Seo title={"Wahaj Haider"} /> */}
+      {/* <Seo title={"Wahaj Haider"} /> */}
       <Helmet>
         <html lang="en" />
         <title>Wahaj Haider</title>
@@ -48,7 +49,7 @@ const IndexPage = () => {
               <AiOutlineGithub />
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/wahajh/">
-              <AiOutlineLinkedin  />
+              <AiOutlineLinkedin />
             </a>
             <a target="_blank" href="https://www.instagram.com/wahaj.haider21/">
               <AiOutlineInstagram />
@@ -70,7 +71,9 @@ const IndexPage = () => {
             />
           </div>
           <div>
-            <div className="text-center lg:text-left text-4xl lg:text-5xl tracking-wider mb-3 md:mb-4">About Me</div>
+            <div className="text-center lg:text-left text-4xl lg:text-5xl tracking-wider mb-3 md:mb-4">
+              About Me
+            </div>
             <div className="text-center md:text-left grid place-content-center">
               <p className="text-white text-lg tracking-wide mb-2">
                 Hey there! I'm <b>Wahaj Haider</b>, a second year computer
@@ -99,13 +102,11 @@ const IndexPage = () => {
         className="bg-white flex justify-center items-center"
       >
         <div className="w-11/12 flex flex-col justify-center items-center pt-32 pb-32 pr-20 pl-20 lg:pr-40 lg:pl-40 gap-10">
-
           <div className="text-5xl tracking-wider lg:mb-5 text-center">
             Projects
           </div>
 
           <div className="grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-2">
-
             <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl lg:mr-10 lg:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
               <div className="flex flex-col flex-0 justify-start items-center">
                 <img
@@ -114,10 +115,10 @@ const IndexPage = () => {
                   alt=""
                 />
               </div>
-              <div className="flex flex-col flex-1">
+              <div className="flex flex-col flex-1 justify-start">
                 <h4 className="mb-1 text-lg">Heart-Watch</h4>
                 <p className="m-0 text-sm leading-5">
-                  A website providing an overview for Heart-Watch, a mobile
+                  This website provides an overview for Heart-Watch, a mobile
                   application providing a modern and simple solution for
                   cardiovascular disease prevention and protection.
                   <div className="italic mt-2">
@@ -125,7 +126,7 @@ const IndexPage = () => {
                   </div>
                 </p>
               </div>
-              <div className="flex flex-1 mb-3 items-end">
+              <div className="flex flex-1 mt-3 items-start">
                 <b>Built using JavaScript, Gatsby (React), HTML, CSS.</b>
               </div>
               <div className="flex flex-row justify-center items-end">
@@ -135,7 +136,7 @@ const IndexPage = () => {
                   href="https://heartwatch.tech/"
                 >
                   <span className="grid place-content-center mr-1">
-                    <CgWebsite />
+                    <HiOutlineDesktopComputer />
                   </span>
                   Live Demo
                 </a>
@@ -160,21 +161,20 @@ const IndexPage = () => {
                   alt="Weather app img"
                 />
               </div>
-              <div className="flex flex-col flex-1">
+              <div className="flex flex-col justify-start">
                 <h4 className="mb-1 text-lg leading-5">
                   React and Express Guide{" "}
-                  <span className="text-sm">(including a Weather app)</span>
                 </h4>
                 <p className="m-0 text-sm leading-5">
-                  An informative guide for people those who want to get started
-                  with React and Express. I was responsible for completing a
-                  demo page that used both technologies and a walkthrough for
-                  creating that demo page. For the demo page, I decided to built
-                  a weather app providing up-to-date weather data based on a
-                  user's location.{" "}
+                  An informative guide for those who want to get started with
+                  React and Express.js. Alongside the guide is a demo page that
+                  uses both technologies, and a walkthrough for creating that
+                  demo page, both of which I was responsible for. The demo page
+                  is a weather app providing up-to-date weather data based on a
+                  user's general location.{" "}
                 </p>
               </div>
-              <div className="flex flex-1 mb-3 items-end">
+              <div className="flex flex-1 mt-3 items-start">
                 <b>Built using JavaScript, React, Express, HTML, CSS.</b>
               </div>
               <div className="flex flex-row justify-center items-end">
@@ -184,14 +184,14 @@ const IndexPage = () => {
                   href="https://cps530-final-project.netlify.app/"
                 >
                   <span className="grid place-content-center mr-1">
-                    <CgWebsite />
+                    <HiOutlineDesktopComputer />
                   </span>
                   Live Demo
                 </a>
                 <a
                   className="flex flex-1 justify-center"
                   target="_blank"
-                  href="https://github.com/Wazotik/heart-watch-DeltaHacks8-2021"
+                  href="https://github.com/Ghazalmir/React-and-Express-Guide"
                 >
                   <span className="grid place-content-center mr-1">
                     <AiFillGithub />
@@ -200,11 +200,8 @@ const IndexPage = () => {
                 </a>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </section>
     </HomeLayout>
   )
