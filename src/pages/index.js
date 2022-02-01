@@ -33,7 +33,7 @@ const IndexPage = () => {
         <div className="flex main-container"></div>
         <div className="flex justify-center items-center w-5/12 name-container">
           <div className="text-white grid place-content-center text-center">
-            <div className="text-5xl md:text-7xl uppercase tracking-widest shadow-sm">
+            <div className="text-6xl md:text-7xl uppercase tracking-widest shadow-sm">
               Wahaj Haider
             </div>
             {/* <div className="text-2xl tracking-wide">
@@ -61,17 +61,17 @@ const IndexPage = () => {
         id="about"
         className="bg-[#2b2b2b] flex justify-center items-center text-white font-karla"
       >
-        <div className="w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-40 pb-40 gap-20">
+        <div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-20 pb-20 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20">
           <div className="grid place-content-center">
             <img
               src={require("../images/wahaj-face-pic.jpg").default}
               alt=""
-              className="max-w-[300px] rounded-2xl m-0 shadow-2xl"
+              className="max-w-[250px] md:max-w-[300px] rounded-2xl m-0 shadow-2xl"
             />
           </div>
           <div>
-            <div className="text-5xl tracking-wider mb-5">About Me</div>
-            <div className="grid place-content-center">
+            <div className="text-center lg:text-left text-4xl lg:text-5xl tracking-wider mb-3 md:mb-4">About Me</div>
+            <div className="text-center md:text-left grid place-content-center">
               <p className="text-white text-lg tracking-wide mb-2">
                 Hey there! I'm <b>Wahaj Haider</b>, a second year computer
                 science co-op student at Ryerson University. I was first
@@ -98,12 +98,15 @@ const IndexPage = () => {
         id="projects"
         className="bg-white flex justify-center items-center"
       >
-        <div className="w-11/12 flex flex-col justify-center items-center pt-20 pb-20 md:pr-40 md:pl-40 md:gap-20 gap-10">
-          <div className="text-5xl tracking-wider md:mb-5 text-center">
+        <div className="w-11/12 flex flex-col justify-center items-center pt-20 pb-20 pr-20 pl-20 lg:pr-40 lg:pl-40 gap-10">
+
+          <div className="text-5xl tracking-wider lg:mb-5 text-center">
             Projects
           </div>
-          <div className="flex gap-8 md:gap-0 justify-around items-center w-[100%] flex-wrap">
-            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl md:mr-10 md:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+
+          <div className="grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-2">
+
+            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl lg:mr-10 lg:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
               <div className="flex flex-col flex-0 justify-start items-center">
                 <img
                   className="shadow-sm mb-3 rounded-t-md"
@@ -148,7 +151,8 @@ const IndexPage = () => {
                 </a>
               </div>
             </div>
-            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl md:mr-10 md:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+
+            <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl lg:mr-10 lg:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
               <div className="flex flex-col flex-0 justify-start items-center">
                 <img
                   className="shadow-sm mb-3 rounded-t-md"
@@ -196,8 +200,11 @@ const IndexPage = () => {
                 </a>
               </div>
             </div>
+
           </div>
+
         </div>
+
       </section>
     </HomeLayout>
   )
