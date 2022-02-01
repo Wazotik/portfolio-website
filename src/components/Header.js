@@ -4,6 +4,7 @@ import { useState } from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { BiMenu, BiArrowBack } from "react-icons/bi"
 import { ImCross} from "react-icons/im"
+import Fade from  "react-reveal/Fade";
 
 const Header = () => {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -11,6 +12,7 @@ const Header = () => {
 		<>
 			<nav className="fixed text-white w-[100%] flex flex-1 justify-start lg:pr-10 lg:pl-10">
 				<div className="w-[100%]">
+					<Fade top>
 					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 mt-[2rem] text-lg">
 						<div className="flex flex-1 justify-around">
 						<li className="hidden xl:block">
@@ -40,6 +42,7 @@ const Header = () => {
 						</li>
 						</div>
 					</ul>
+					</Fade>
 					<div className="lg:hidden flex items-center justify-end mt-5 mr-5 cursor-pointer">
 						<BiMenu onClick={() => {setSidebarOpen(!sidebarOpen)}} size={46} />
 					</div>
