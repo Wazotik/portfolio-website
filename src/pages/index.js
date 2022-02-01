@@ -98,7 +98,7 @@ const IndexPage = () => {
         id="projects"
         className="bg-white flex justify-center items-center"
       >
-        <div className="w-11/12 flex flex-col justify-center items-center pt-20 pb-20 pr-20 pl-20 lg:pr-40 lg:pl-40 gap-10">
+        <div className="w-11/12 flex flex-col justify-center items-center pt-32 pb-32 pr-20 pl-20 lg:pr-40 lg:pl-40 gap-10">
 
           <div className="text-5xl tracking-wider lg:mb-5 text-center">
             Projects
