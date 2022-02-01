@@ -122,7 +122,7 @@ const IndexPage = () => {
           </Fade>
 
           <Fade bottom>
-            <div className="grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-3 lg:grid-cols-2">
+            <div className="inline-grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-3 md:grid-cols-2">
               <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
                 <div className="flex flex-col flex-0 justify-start items-center">
                   <img
