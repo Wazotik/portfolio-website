@@ -612,7 +612,7 @@ pre tt:after {
 }
 
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) ,url('../images/wahaj-main-pic-min.png') center center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) ,url('../images/wahaj-main-pic-min.jpg') center center/cover no-repeat;
   background-attachment: fixed;
 }
 

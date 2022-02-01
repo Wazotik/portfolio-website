@@ -74,7 +74,7 @@ const IndexPage = () => {
           <Fade left>
             <div className="grid place-content-center">
               <img
-                src={require("../images/wahaj-face-pic.jpg").default}
+                src={require("../images/wahaj-face-pic-min.jpg").default}
                 alt=""
                 className="max-w-[250px] md:max-w-[300px] rounded-2xl m-0 shadow-2xl"
               />
