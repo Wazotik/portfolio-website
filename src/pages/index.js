@@ -46,6 +46,7 @@ const IndexPage = () => {
             </div> */}
           </div>
         </div>
+        <Fade right>
           <div className="flex justify-end items-center main-container">
             <div className="flex flex-row md:flex-col gap-10 mb-5 md:mb-0 md:mr-5 items-center text-3xl">
               <a target="_blank" href="https://github.com/Wazotik">
@@ -62,13 +63,14 @@ const IndexPage = () => {
               </a>
             </div>
           </div>
+        </Fade>
       </div>
 
       <section
         id="about"
         className="bg-[#2b2b2b] flex justify-center items-center text-white font-karla"
       >
-        <div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-14 pb-14 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20 mt-32 mb-32">
+        <div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-14 pb-14 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20 lg:mt-20 lg:mb-20">
           <Fade left>
             <div className="grid place-content-center">
               <img
@@ -114,7 +116,7 @@ const IndexPage = () => {
         id="projects"
         className="bg-white flex justify-center items-center"
       >
-        <div className="w-11/12 flex flex-col justify-center items-center pt-14 pb-14 md:pt-24 md:pb-24 gap-10 mt-16 mb-16">
+        <div className="w-11/12 flex flex-col justify-center items-center pt-14 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-16 lg:mb-16">
           <Fade left>
             <div className="text-5xl tracking-wider lg:mb-5 text-center">
               Projects
@@ -238,8 +240,8 @@ const IndexPage = () => {
                     Day Image API to display likeable collections of images
                     alongside their appropriate metadata
                     <div className="italic mt-2">
-                      This project was submitted to the Shopify Frontend Developer
-                      Intern Challenge.
+                      This project was submitted to the Shopify Frontend
+                      Developer Intern Challenge.
                     </div>
                   </p>
                 </div>

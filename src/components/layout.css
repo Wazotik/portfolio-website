@@ -624,4 +624,6 @@ pre tt:after {
   flex: 2 1 0;
 }
 
-
+.react-reveal{
+  animation-fill-mode: backwards !important;
+}
