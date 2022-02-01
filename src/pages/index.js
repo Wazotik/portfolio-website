@@ -47,7 +47,7 @@ const IndexPage = () => {
           </div>
         </div>
         <Fade right>
-          <div className="flex justify-end items-center main-container">
+          <div className="flex justify-end items-center main-container z-0">
             <div className="flex flex-row md:flex-col gap-10 mb-5 md:mb-0 md:mr-5 items-center text-3xl">
               <a target="_blank" href="https://github.com/Wazotik">
                 <AiOutlineGithub />
@@ -66,21 +66,20 @@ const IndexPage = () => {
         </Fade>
       </div>
 
-
       <section
-			id="about"
+        id="about"
         className="bg-[#2b2b2b] flex justify-center items-center text-white font-karla"
       >
         <div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-14 pb-14 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20 mt-32 mb-32">
-			  <Fade left>
-				<div className="grid place-content-center">
-					<img
-					src={require("../images/wahaj-face-pic.jpg").default}
-					alt=""
-					className="max-w-[250px] md:max-w-[300px] rounded-2xl m-0 shadow-2xl"
-					/>
-				</div>
-			  </Fade>
+          <Fade left>
+            <div className="grid place-content-center">
+              <img
+                src={require("../images/wahaj-face-pic.jpg").default}
+                alt=""
+                className="max-w-[250px] md:max-w-[300px] rounded-2xl m-0 shadow-2xl"
+              />
+            </div>
+          </Fade>
           <div>
             <div className="text-center lg:text-left text-4xl lg:text-5xl tracking-wider mb-3 md:mb-4">
               <Fade top>
@@ -117,7 +116,7 @@ const IndexPage = () => {
         id="projects"
         className="bg-white flex justify-center items-center"
       >
-        <div className="w-11/12 flex flex-col justify-center items-center pt-14 pb-14 md:pt-28 md:pb-28 md:pr-40 md:pl-40 gap-10 mt-16 mb-16">
+        <div className="w-11/12 flex flex-col justify-center items-center pt-14 pb-14 md:pt-24 md:pb-24 gap-10 mt-16 mb-16">
           <Fade left>
             <div className="text-5xl tracking-wider lg:mb-5 text-center">
               Projects
@@ -125,8 +124,8 @@ const IndexPage = () => {
           </Fade>
 
           <Fade bottom>
-            <div className="grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-2">
-              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl lg:mr-10 lg:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+            <div className="grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-3 lg:grid-cols-2">
+              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
                 <div className="flex flex-col flex-0 justify-start items-center">
                   <img
                     className="shadow-sm mb-3 rounded-t-md"
@@ -174,7 +173,7 @@ const IndexPage = () => {
                 </div>
               </div>
 
-              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl lg:mr-10 lg:ml-10 flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl  flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
                 <div className="flex flex-col flex-0 justify-start items-center">
                   <img
                     className="shadow-sm mb-3 rounded-t-md"
@@ -215,6 +214,55 @@ const IndexPage = () => {
                     className="flex flex-1 justify-center"
                     target="_blank"
                     href="https://github.com/Ghazalmir/React-and-Express-Guide"
+                  >
+                    <span className="grid place-content-center mr-1">
+                      <AiFillGithub />
+                    </span>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+
+              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl  flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+                <div className="flex flex-col flex-0 justify-start items-center">
+                  <img
+                    className="shadow-sm mb-3 rounded-t-md"
+                    src={
+                      require("../images/spacestagram-screenshot1.png").default
+                    }
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-col flex-1 justify-start">
+                  <h4 className="mb-1 text-lg">Spacestagram</h4>
+                  <p className="m-0 text-sm leading-5">
+                    Web app that makes use of NASA's Astrology Picture of the
+                    Day Image API to display likeable collections of images
+                    alongside their appropriate metadata
+                    <div className="italic mt-2">
+                      This project was submitted to the Shopify Frontend Developer
+                      Intern Challenge.
+                    </div>
+                  </p>
+                </div>
+                <div className="flex flex-1 mt-3 items-start">
+                  <b>Built using JavaScript, React, Express, HTML, CSS.</b>
+                </div>
+                <div className="flex flex-row justify-center items-end">
+                  <a
+                    className="flex flex-1 justify-center"
+                    target="_blank"
+                    href="https://spacestagram-wahaj.netlify.app/"
+                  >
+                    <span className="grid place-content-center mr-1">
+                      <HiOutlineDesktopComputer />
+                    </span>
+                    Live Demo
+                  </a>
+                  <a
+                    className="flex flex-1 justify-center"
+                    target="_blank"
+                    href="https://github.com/Wazotik/spacestagram-shopify-challenge"
                   >
                     <span className="grid place-content-center mr-1">
                       <AiFillGithub />
