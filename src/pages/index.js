@@ -130,7 +130,7 @@ const IndexPage = () => {
                   <img
                     className="shadow-sm mb-3 rounded-t-md"
                     src={
-                      require("../images/heart-watch-screenshot.png").default
+                      require("../images/heart-watch-screenshot-min.jpg").default
                     }
                     alt=""
                   />
@@ -178,7 +178,7 @@ const IndexPage = () => {
                   <img
                     className="shadow-sm mb-3 rounded-t-md"
                     src={
-                      require("../images/react-guide-screenshot.png").default
+                      require("../images/react-guide-screenshot-min.jpg").default
                     }
                     alt="Weather app img"
                   />
@@ -228,7 +228,7 @@ const IndexPage = () => {
                   <img
                     className="shadow-sm mb-3 rounded-t-md"
                     src={
-                      require("../images/spacestagram-screenshot1.png").default
+                      require("../images/spacestagram-screenshot-min.jpg").default
                     }
                     alt=""
                   />
