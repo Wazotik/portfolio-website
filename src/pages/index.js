@@ -37,9 +37,9 @@ const IndexPage = () => {
         <div className="flex main-container"></div>
         <div className="flex justify-center items-center w-5/12 name-container">
           <div className="text-white grid place-content-center text-center">
-            <div className="text-6xl md:text-7xl uppercase tracking-widest shadow-sm">
+            <h1 className="text-5xl md:text-6xl uppercase tracking-widest shadow-sm font-normal m-0">
               Wahaj Haider
-            </div>
+            </h1>
             {/* <div className="text-2xl tracking-wide">
               Aspiring Full Stack Developer with a passion to create and
               innovate
