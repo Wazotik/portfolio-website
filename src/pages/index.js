@@ -37,7 +37,7 @@ const IndexPage = () => {
         <div className="flex main-container"></div>
         <div className="flex justify-center items-center w-5/12 name-container">
           <div className="text-white grid place-content-center text-center">
-            <h1 className="text-5xl md:text-6xl uppercase tracking-widest shadow-sm font-normal m-0">
+            <h1 className="text-5xl md:text-6xl uppercase tracking-widest shadow-sm font-normal m-0 font-karla">
               Wahaj Haider
             </h1>
             {/* <div className="text-2xl tracking-wide">
@@ -73,7 +73,7 @@ const IndexPage = () => {
             <img
               src={require("../images/wahaj-face-pic-min.jpg").default}
               alt=""
-              className="max-w-[250px] md:max-w-[300px] rounded-2xl m-0 shadow-2xl"
+              className="max-w-[300px] md:max-w-[350px] rounded-2xl m-0 shadow-2xl"
             />
           </div>
           <div>
@@ -83,8 +83,8 @@ const IndexPage = () => {
               </Fade>
             </div>
             <Fade bottom>
-              <div className="text-center md:text-left grid place-content-center">
-                <p className="text-white text-lg tracking-wide mb-2">
+              <div className="text-left text-md md:text-lg grid place-content-center">
+                <p className="text-white tracking-wide mb-3 md:mb-2">
                   Hey there! I'm <b>Wahaj Haider</b>, a second year computer
                   science co-op student at Ryerson University. I was first
                   introduced to the world of programming during my junior year
@@ -93,7 +93,7 @@ const IndexPage = () => {
                   for the benefit/entertainment of others takes it to a whole
                   new level.
                 </p>
-                <p className="text-white text-lg tracking-wide mb-2">
+                <p className="text-white tracking-wide mb-2">
                   I've recently taken an interest in <b>web development</b> and
                   have had a lot of fun building web applications using
                   technologies/frameworks such as <b>JavaScript</b>, <b>HTML</b>
