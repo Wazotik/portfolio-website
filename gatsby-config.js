@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-preact`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
