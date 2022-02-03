@@ -117,7 +117,7 @@ const IndexPage = () => {
         id="projects"
         className="bg-white flex justify-center items-center"
       >
-        <div className="w-11/12 flex flex-col justify-center items-center pt-14 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-16 lg:mb-16">
+        <div className="w-11/12 flex flex-col justify-center items-center pt-14 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-10 lg:mb-16">
           <Fade left>
             <div className="text-5xl tracking-wider lg:mb-5 text-center">
               Projects
@@ -132,7 +132,9 @@ const IndexPage = () => {
                 desc={
                   "An informative guide for those who want to get started with React and Express.js. Inside the guide is a Weather app that shows both technologies working together. It provides up-to-date weather data based on a user's general location. Fun fact: this was my first time using both technologies and  I learned a whole lot about each after completing this project."
                 }
-                builtInfo={"Built using JavaScript, React, Express.js, HTML, CSS."}
+                builtInfo={
+                  "Built using JavaScript, React, Express.js, HTML, CSS."
+                }
                 demoLink={"https://cps530-final-project.netlify.app/"}
                 githubLink={
                   "https://github.com/Ghazalmir/React-and-Express-Guide"
@@ -158,17 +160,35 @@ const IndexPage = () => {
                 desc={
                   "Web app that makes use of NASA's Astrology Picture of the Day Image API to display likeable collections of images alongside their appropriate metadata"
                 }
-                builtInfo={"Built using JavaScript, React, Express.js, HTML, CSS."}
+                builtInfo={
+                  "Built using JavaScript, React, Express.js, HTML, CSS."
+                }
                 demoLink={"https://spacestagram-wahaj.netlify.app/"}
                 githubLink={
                   "https://github.com/Wazotik/spacestagram-shopify-challenge"
                 }
               />
             </div>
-
           </Fade>
-          
         </div>
+      </section>
+
+      <section id="skills" className="flex justify-center items-center bg-gray-800 text-white">
+        <div className="w-11/12 flex flex-col pt-14 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-16 lg:mb-16">
+          <div className="flex flex-1 pl-52">
+            <Fade right>
+              <div className="text-5xl tracking-wider lg:mb-5 text-left ">
+                Skills
+              </div>
+            </Fade>
+          </div>
+
+          <div className="flex flex-1 justify-center">
+            <h3>Under construction</h3>
+          </div>
+
+        </div>
+
       </section>
     </HomeLayout>
   )

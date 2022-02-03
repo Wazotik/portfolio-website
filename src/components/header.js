@@ -5,37 +5,58 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { BiMenu, BiArrowBack } from "react-icons/bi"
 import { ImCross} from "react-icons/im"
 import Fade from  "react-reveal/Fade";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const Header = () => {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
+	const [scrollPositionY, setScrollPositionY] = useState(0);
+
+	useScrollPosition(({ prevPos, currPos }) => {
+		setScrollPositionY(currPos.y);
+	})
+
 	return (
 		<>
-			<nav className="fixed text-white w-[100%] flex flex-1 justify-start lg:pr-10 lg:pl-10">
+			<nav className="fixed text-white w-[100%] flex flex-1 justify-start lg:pr-10 lg:pl-10" style={{
+				color: scrollPositionY < -800 ? "#2b2b2b" : "white",
+				backgroundColor: scrollPositionY < -800 ? "white" : "transparent",
+				boxShadow: scrollPositionY < -800 ? "0 2px 2px -2px rgba(0,0,0,0.5)" : "none",
+				transition: "all 0.2s ease-in-out",
+			}}>
 				<div className="w-[100%]">
 					<Fade top>
-					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 mt-[2rem] text-lg">
+					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 text-lg" style={{
+						height: scrollPositionY < -800 ? "4rem" : "5rem",
+						transition: "all 0.2s ease-in-out",
+					}}>
 						<div className="flex flex-1 justify-around">
-						<li className="hidden xl:block">
+						<li className="hidden xl:block m-0">
 							<a className="" href="#home">
 								Wahaj Haider
 							</a>
 						</li>
-						<li className="">
+						<li className=" m-0">
 							<a href="#about">About</a>
 						</li>
-						<li className="">
+						<li className=" m-0">
 							<a href="#projects">Projects</a>
 						</li>
-						<li className="">
+						<li className=" m-0">
+							<a href="#skills">Skills</a>
+						</li>
+						<li className=" m-0">
 							<Link to="/resume">Resume</Link>
 						</li>
 						</div>
 						<div className="flex flex-1"></div>
 						<div className="flex flex-1 justify-end">
-						<li className="">
+						<li className="m-0">
 							<Link
-								className="border-solid bg-[#2b2b2b]/80 hover:bg-[#2b2b2b] p-2 pr-5 pl-5 rounded-md transition-colors duration-300"
+								className="text-white border-solid bg-[#2b2b2b]/80 hover:bg-[#2b2b2b] p-2 pr-5 pl-5 rounded-md transition-colors duration-300"
 								href="/contact"
+								style={{
+
+								}}
 							>
 								Contact
 							</Link>
