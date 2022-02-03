@@ -128,11 +128,11 @@ const IndexPage = () => {
             <div className="inline-grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-3 md:grid-cols-2">
               <ProjectCard
                 pathToImg={reactGuideScreenshot}
-                title={"React and Express.js Guide w/ Weather app"}
+                title={"React and Express.js Guide w/ a Weather app"}
                 desc={
-                  "An informative guide for those who want to get started with React and Express.js. Alongside the guide is a demo page that uses both technologies, and a walkthrough for creating that demo page, both of which I was responsible for. The demo page is a weather app providing up-to-date weather data based on a user's general location."
+                  "An informative guide for those who want to get started with React and Express.js. Inside the guide is a Weather app that shows both technologies working together. It provides up-to-date weather data based on a user's general location. Fun fact: this was my first time using both technologies and  I learned a whole lot about each after completing this project."
                 }
-                builtInfo={"Built using JavaScript, React, Express, HTML, CSS."}
+                builtInfo={"Built using JavaScript, React, Express.js, HTML, CSS."}
                 demoLink={"https://cps530-final-project.netlify.app/"}
                 githubLink={
                   "https://github.com/Ghazalmir/React-and-Express-Guide"
@@ -158,14 +158,16 @@ const IndexPage = () => {
                 desc={
                   "Web app that makes use of NASA's Astrology Picture of the Day Image API to display likeable collections of images alongside their appropriate metadata"
                 }
-                builtInfo={"Built using JavaScript, Gatsby (React), HTML, CSS."}
+                builtInfo={"Built using JavaScript, React, Express.js, HTML, CSS."}
                 demoLink={"https://spacestagram-wahaj.netlify.app/"}
                 githubLink={
                   "https://github.com/Wazotik/spacestagram-shopify-challenge"
                 }
               />
             </div>
+
           </Fade>
+          
         </div>
       </section>
     </HomeLayout>
