@@ -21,12 +21,11 @@ const Header = () => {
 				color: scrollPositionY < -800 ? "#2b2b2b" : "white",
 				backgroundColor: scrollPositionY < -800 ? "white" : "transparent",
 				boxShadow: scrollPositionY < -800 ? "0 2px 2px -2px rgba(0,0,0,0.5)" : "none",
-				transition: "all 0.2s ease-in-out",
 			}}>
 				<div className="w-[100%]">
 					<Fade top>
 					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 text-lg" style={{
-						height: scrollPositionY < -800 ? "4rem" : "5rem",
+						height: scrollPositionY < -800 ? "4rem" : "6rem",
 						transition: "all 0.2s ease-in-out",
 					}}>
 						<div className="flex flex-1 justify-around">
