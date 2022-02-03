@@ -16,6 +16,14 @@ import { Helmet } from "react-helmet"
 import Fade from "react-reveal/Fade"
 import Slide from "react-reveal/Slide"
 import Reveal from "react-reveal/Reveal"
+import ProjectCard from "../components/ProjectCard"
+
+const heartWatchScreenshot =
+  require("../images/heart-watch-screenshot-min.jpg").default
+const reactGuideScreenshot =
+  require("../images/react-guide-screenshot-min.jpg").default
+const spacestgramScreenshot =
+  require("../images/spacestagram-screenshot-min.jpg").default
 
 const IndexPage = () => {
   return (
@@ -54,10 +62,7 @@ const IndexPage = () => {
             <a target="_blank" href="https://www.linkedin.com/in/wahajh/">
               <AiOutlineLinkedin />
             </a>
-            <a
-              target="_blank"
-              href="https://www.instagram.com/wahaj.haider21/"
-            >
+            <a target="_blank" href="https://www.instagram.com/wahaj.haider21/">
               <AiOutlineInstagram />
             </a>
           </div>
@@ -121,152 +126,44 @@ const IndexPage = () => {
 
           <Fade bottom>
             <div className="inline-grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-3 md:grid-cols-2">
-              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
-                <div className="flex flex-col flex-0 justify-start items-center">
-                  <img
-                    className="shadow-sm mb-3 rounded-t-md"
-                    src={
-                      require("../images/heart-watch-screenshot-min.jpg").default
-                    }
-                    alt=""
-                  />
-                </div>
-                <div className="flex flex-col flex-1 justify-start">
-                  <h4 className="mb-1 text-lg">Heart-Watch</h4>
-                  <p className="m-0 text-sm leading-5">
-                    This website provides an overview for Heart-Watch, a mobile
-                    application providing a modern and simple solution for
-                    cardiovascular disease prevention and protection.
-                    <div className="italic mt-2">
-                      This project was submitted to DeltaHacks 8.
-                    </div>
-                  </p>
-                </div>
-                <div className="flex flex-1 mt-3 items-start">
-                  <b>Built using JavaScript, Gatsby (React), HTML, CSS.</b>
-                </div>
-                <div className="flex flex-row justify-center items-end">
-                  <a
-                    className="flex flex-1 justify-center"
-                    target="_blank"
-                    href="https://heartwatch.tech/"
-                  >
-                    <span className="grid place-content-center mr-1">
-                      <HiOutlineDesktopComputer />
-                    </span>
-                    Live Demo
-                  </a>
-                  <a
-                    className="flex flex-1 justify-center"
-                    target="_blank"
-                    href="https://github.com/Wazotik/heart-watch-DeltaHacks8-2021"
-                  >
-                    <span className="grid place-content-center mr-1">
-                      <AiFillGithub />
-                    </span>
-                    GitHub
-                  </a>
-                </div>
-              </div>
+              <ProjectCard
+                pathToImg={reactGuideScreenshot}
+                title={"React and Express.js Guide w/ Weather app"}
+                desc={
+                  "An informative guide for those who want to get started with React and Express.js. Alongside the guide is a demo page that uses both technologies, and a walkthrough for creating that demo page, both of which I was responsible for. The demo page is a weather app providing up-to-date weather data based on a user's general location."
+                }
+                builtInfo={"Built using JavaScript, React, Express, HTML, CSS."}
+                demoLink={"https://cps530-final-project.netlify.app/"}
+                githubLink={
+                  "https://github.com/Ghazalmir/React-and-Express-Guide"
+                }
+              />
 
-              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl  flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
-                <div className="flex flex-col flex-0 justify-start items-center">
-                  <img
-                    className="shadow-sm mb-3 rounded-t-md"
-                    src={
-                      require("../images/react-guide-screenshot-min.jpg").default
-                    }
-                    alt="Weather app img"
-                  />
-                </div>
-                <div className="flex flex-col justify-start">
-                  <h4 className="mb-1 text-lg leading-5">
-                    React and Express Guide{" "}
-                  </h4>
-                  <p className="m-0 text-sm leading-5">
-                    An informative guide for those who want to get started with
-                    React and Express.js. Alongside the guide is a demo page
-                    that uses both technologies, and a walkthrough for creating
-                    that demo page, both of which I was responsible for. The
-                    demo page is a weather app providing up-to-date weather data
-                    based on a user's general location.{" "}
-                  </p>
-                </div>
-                <div className="flex flex-1 mt-3 items-start">
-                  <b>Built using JavaScript, React, Express, HTML, CSS.</b>
-                </div>
-                <div className="flex flex-row justify-center items-end">
-                  <a
-                    className="flex flex-1 justify-center"
-                    target="_blank"
-                    href="https://cps530-final-project.netlify.app/"
-                  >
-                    <span className="grid place-content-center mr-1">
-                      <HiOutlineDesktopComputer />
-                    </span>
-                    Live Demo
-                  </a>
-                  <a
-                    className="flex flex-1 justify-center"
-                    target="_blank"
-                    href="https://github.com/Ghazalmir/React-and-Express-Guide"
-                  >
-                    <span className="grid place-content-center mr-1">
-                      <AiFillGithub />
-                    </span>
-                    GitHub
-                  </a>
-                </div>
-              </div>
+              <ProjectCard
+                pathToImg={heartWatchScreenshot}
+                title={"Heart-Watch"}
+                desc={
+                  "This website provides an overview for Heart-Watch, a mobile application providing a modern and simple solution for cardiovascular disease prevention and protection."
+                }
+                builtInfo={"Built using JavaScript, Gatsby (React), HTML, CSS."}
+                demoLink={"https://heartwatch.tech/"}
+                githubLink={
+                  "https://github.com/Wazotik/heart-watch-DeltaHacks8-2021"
+                }
+              />
 
-              <div className="border-solid border-4 border-[#2b2b2b] w-80 h-[32rem] rounded-xl  flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
-                <div className="flex flex-col flex-0 justify-start items-center">
-                  <img
-                    className="shadow-sm mb-3 rounded-t-md"
-                    src={
-                      require("../images/spacestagram-screenshot-min.jpg").default
-                    }
-                    alt=""
-                  />
-                </div>
-                <div className="flex flex-col flex-1 justify-start">
-                  <h4 className="mb-1 text-lg">Spacestagram</h4>
-                  <p className="m-0 text-sm leading-5">
-                    Web app that makes use of NASA's Astrology Picture of the
-                    Day Image API to display likeable collections of images
-                    alongside their appropriate metadata
-                    <div className="italic mt-2">
-                      This project was submitted to the Shopify Frontend
-                      Developer Intern Challenge.
-                    </div>
-                  </p>
-                </div>
-                <div className="flex flex-1 mt-3 items-start">
-                  <b>Built using JavaScript, React, Express, HTML, CSS.</b>
-                </div>
-                <div className="flex flex-row justify-center items-end">
-                  <a
-                    className="flex flex-1 justify-center"
-                    target="_blank"
-                    href="https://spacestagram-wahaj.netlify.app/"
-                  >
-                    <span className="grid place-content-center mr-1">
-                      <HiOutlineDesktopComputer />
-                    </span>
-                    Live Demo
-                  </a>
-                  <a
-                    className="flex flex-1 justify-center"
-                    target="_blank"
-                    href="https://github.com/Wazotik/spacestagram-shopify-challenge"
-                  >
-                    <span className="grid place-content-center mr-1">
-                      <AiFillGithub />
-                    </span>
-                    GitHub
-                  </a>
-                </div>
-              </div>
+              <ProjectCard
+                pathToImg={spacestgramScreenshot}
+                title={"Spacestagram"}
+                desc={
+                  "Web app that makes use of NASA's Astrology Picture of the Day Image API to display likeable collections of images alongside their appropriate metadata"
+                }
+                builtInfo={"Built using JavaScript, Gatsby (React), HTML, CSS."}
+                demoLink={"https://spacestagram-wahaj.netlify.app/"}
+                githubLink={
+                  "https://github.com/Wazotik/spacestagram-shopify-challenge"
+                }
+              />
             </div>
           </Fade>
         </div>
