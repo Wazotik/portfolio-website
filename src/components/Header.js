@@ -26,7 +26,7 @@ const Header = () => {
 					<Fade top>
 					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 text-lg" style={{
 						height: scrollPositionY < -800 ? "4rem" : "6rem",
-						transition: "all 0.2s ease-in-out",
+						transition: "all 0.5s ease-in-out",
 					}}>
 						<div className="flex flex-1 justify-around">
 						<li className="hidden xl:block m-0">
