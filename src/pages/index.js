@@ -73,7 +73,7 @@ const IndexPage = () => {
         id="about"
         className="bg-[#2b2b2b] flex justify-center items-center text-white font-karla"
       >
-        <div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-14 pb-14 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20 lg:mt-20 lg:mb-20">
+        <div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-20 pb-20 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20 lg:mt-20 lg:mb-20">
           <div className="grid place-content-center">
             <img
               src={require("../images/wahaj-face-pic-min.jpg").default}

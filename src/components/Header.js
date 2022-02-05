@@ -18,15 +18,15 @@ const Header = () => {
 	return (
 		<>
 			<nav className="fixed text-white w-[100%] flex flex-1 justify-start lg:pr-10 lg:pl-10" style={{
-				color: scrollPositionY < -800 ? "#2b2b2b" : "white",
-				backgroundColor: scrollPositionY < -800 ? "white" : "transparent",
 				boxShadow: scrollPositionY < -800 ? "0 2px 2px -2px rgba(0,0,0,0.5)" : "none",
+				backgroundColor: scrollPositionY < -800 ? "white" : "transparent",
 			}}>
 				<div className="w-[100%]">
 					<Fade top>
 					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 text-lg" style={{
+						color: scrollPositionY < -800 ? "#2b2b2b" : "white",
 						height: scrollPositionY < -800 ? "4rem" : "6rem",
-						transition: "all 0.5s ease-in-out",
+						transition: "all 0.2s ease-in-out",
 					}}>
 						<div className="flex flex-1 justify-around">
 						<li className="hidden xl:block m-0">
@@ -63,7 +63,9 @@ const Header = () => {
 						</div>
 					</ul>
 					</Fade>
-					<div className="lg:hidden flex items-center justify-end mt-5 mr-5 cursor-pointer">
+					<div className="lg:hidden flex items-center justify-end mt-3 mb-3 mr-3 cursor-pointer" style={{
+						color: scrollPositionY < -800 ? "#2b2b2b" : "white",
+					}}>
 						<BiMenu onClick={() => {setSidebarOpen(!sidebarOpen)}} size={46} />
 					</div>
 				</div>
@@ -74,22 +76,25 @@ const Header = () => {
 							<ImCross className="" onClick={() => {setSidebarOpen(!sidebarOpen)}} size={26} />
 						</div>
 						<div className="w-full flex flex-1 justify-center items-center text-center text-3xl">
-							<ul className="m-0">
-								<li className="mb-20">
+							<ul className="m-0 flex flex-col gap-14">
+								<li className="">
 									<a className="" href="#home" onClick={() => setSidebarOpen(!sidebarOpen)}>
 										Home
 									</a>
 								</li>
-								<li className="mb-20">
+								<li className="">
 									<a href="#about" onClick={() => setSidebarOpen(!sidebarOpen)}>About</a>
 								</li>
-								<li className="mb-20">
+								<li className="">
 									<a href="#projects" onClick={() => setSidebarOpen(!sidebarOpen)}>Projects</a>
 								</li>
-								<li className="mb-20">
+								<li className="">
+									<a href="#skills" onClick={() => setSidebarOpen(!sidebarOpen)}>Skills</a>
+								</li>
+								<li className="">
 									<Link to="/resume">Resume</Link>
 								</li>
-								<li className="mb-20">
+								<li className="">
 									<Link
 										className=""
 										href="/contact"
