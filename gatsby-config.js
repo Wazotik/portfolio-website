@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: ``,
     description: `My personal portfolio website`,
-    author: `Wahaj Haider`,
+    author: ``,
     siteUrl: `https://www.wahajhaider.ca`,
   },
   plugins: [
