@@ -136,7 +136,7 @@ const IndexPage = () => {
                 builtInfo={
                   "Built using JavaScript, React, Express.js, HTML, CSS."
                 }
-                demoLink={"https://cps530-final-project.netlify.app/"}
+                demoLink={"https://cps530-final-project.netlify.app/demo"}
                 githubLink={
                   "https://github.com/Ghazalmir/React-and-Express-Guide"
                 }
