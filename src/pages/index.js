@@ -13,9 +13,7 @@ import {
 import { HiOutlineDesktopComputer } from "react-icons/hi"
 import Seo from "../components/seo"
 import { Helmet } from "react-helmet"
-import Fade from "react-reveal/Fade"
-import Slide from "react-reveal/Slide"
-import Reveal from "react-reveal/Reveal"
+import { Fade } from "react-awesome-reveal"
 import ProjectCard from "../components/ProjectCard"
 
 const heartWatchScreenshot =
@@ -24,6 +22,8 @@ const reactGuideScreenshot =
   require("../images/react-guide-screenshot-min.jpg").default
 const spacestgramScreenshot =
   require("../images/spacestagram-screenshot-min.jpg").default
+const keyboardMarketScreenshot =
+  require("../images/keyboard-market-screenshot-min.jpg").default
 
 const IndexPage = () => {
   return (
@@ -41,6 +41,7 @@ const IndexPage = () => {
       <div
         id="home"
         className="hero-section min-h-screen w-[100%] object-contain flex flex-col md:flex-row justify-center items-center text-white"
+        style={{zIndex: "1"}}
       >
         <div className="flex main-container"></div>
         <div className="flex justify-center items-center w-5/12 name-container">
@@ -76,7 +77,6 @@ const IndexPage = () => {
         <div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-24 pb-14 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20 lg:mt-20 lg:mb-20">
           <div className="grid place-content-center">
             <img
-
               src={require("../images/wahaj-face-pic-min.jpg").default}
               alt=""
               className="max-w-[300px] md:max-w-[350px] rounded-2xl m-0 shadow-2xl"
@@ -84,24 +84,24 @@ const IndexPage = () => {
           </div>
           <div>
             <div className="text-center lg:text-left text-4xl lg:text-5xl tracking-wider mb-3 md:mb-4">
-              <Fade top>
+              <Fade direction="down">
                 <div>About Me</div>
               </Fade>
             </div>
-            <Fade bottom>
+            <Fade direction="up">
               <div className="text-left text-md md:text-lg grid place-content-center">
                 <p className="text-white tracking-wide mb-3 md:mb-2">
-                  Hey there! I'm <b>Wahaj Haider</b>, a second year computer
-                  science co-op student at Ryerson University. I was first
-                  introduced to the world of programming during my junior year
-                  of high school, and ever since then, I've been hooked. I love
-                  being able to create something out of nothing and doing it so
-                  for the benefit/entertainment of others takes it to a whole
-                  new level.
+                  Hey there! I'm <b>Wahaj Haider</b>, a third year computer
+                  science co-op student at Toronto Metropolitan University
+                  (formerly Ryerson University). I was first introduced to the
+                  world of programming during my junior year of high school, and
+                  ever since then, I've been hooked. I love being able to create
+                  something out of nothing and doing it so for the
+                  benefit/entertainment of others takes it to a whole new level.
                 </p>
                 <p className="text-white tracking-wide mb-2">
-                  I've recently taken an interest in <b>web development</b> and
-                  have had a lot of fun building web applications using
+                  I've taken a special interest in <b>web development</b> and have had
+                  a lot of fun building web applications using
                   technologies/frameworks such as <b>JavaScript</b>, <b>HTML</b>
                   , <b>CSS</b>, <b>React</b>, <b>Express.js</b>, <b>SQL</b>,
                   etc. I'm also proficient in other languages such as{" "}
@@ -119,22 +119,37 @@ const IndexPage = () => {
         className="bg-white flex justify-center items-center"
       >
         <div className="w-11/12 flex flex-col justify-center items-center pt-24 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-10 lg:mb-16">
-          <Fade left>
+          <Fade direction="left">
             <div className="text-5xl tracking-wider lg:mb-5 text-center">
               Projects
             </div>
           </Fade>
 
-          <Fade bottom>
-            <div className="inline-grid w-full gap-10 grid-cols-1 place-items-center xl:grid-cols-3 md:grid-cols-2">
+          {/* <Fade direction="up"> */}
+            <div className="inline-grid w-full gap-0 gap-y-10 grid-cols-1 place-items-center xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2">
               <ProjectCard
-                pathToImg={reactGuideScreenshot}
-                title={"React and Express.js Guide w/ a Weather app"}
+                pathToImg={keyboardMarketScreenshot}
+                title={"Keyboard Market"}
                 desc={
-                  "An informative guide for those who want to get started with React and Express.js. Inside the guide is a Weather app that shows both technologies working together. It provides up-to-date weather data based on a user's general location. Fun fact: this was my first time using both technologies and  I learned a whole lot about each after completing this project."
+                  "App enablings users (and myself) to explore a wide variety of mechanical keyboard products. Users can search, filter, sort and soon see reviews of products to make the search for their favourite keyboard(s) that much easier. Keyboard data is web-scraped from mechanicalkeyboards.com"
                 }
                 builtInfo={
-                  "Built using JavaScript, React, Express.js, HTML, CSS."
+                  "Built using React, Express.js, JavaScript, HTML, CSS, MySQL, and Puppeteer."
+                }
+                demoLink={"https://keyboard-market.netlify.app/"}
+                githubLink={
+                  "https://github.com/Wazotik/keyboard-market"
+                }
+              />
+
+              <ProjectCard
+                pathToImg={reactGuideScreenshot}
+                title={"Weather app (inside React and Express Guide"}
+                desc={
+                  "A full-stack application proving users real-time weather data based on their location. This was a demo page for a school project, serving as a beginner's guide to React.js and Express.js."
+                }
+                builtInfo={
+                  "Built using React, Express.js, JavaScript, HTML, CSS, and the OpenWeatherMap API."
                 }
                 demoLink={"https://cps530-final-project.netlify.app/demo"}
                 githubLink={
@@ -146,9 +161,9 @@ const IndexPage = () => {
                 pathToImg={heartWatchScreenshot}
                 title={"Heart-Watch"}
                 desc={
-                  "This website provides an overview for Heart-Watch, a mobile application providing a modern and simple solution for cardiovascular disease prevention and protection."
+                  "This website provides an overview for Heart-Watch, a mobile application providing a modern solution for cardiovascular disease prevention and protection. This was used as a demo page for our hack in DeltaHacks8."
                 }
-                builtInfo={"Built using JavaScript, Gatsby (React), HTML, CSS."}
+                builtInfo={"Built using JavaScript, Gatsby (React), HTML, and CSS."}
                 demoLink={"https://heartwatch.tech/"}
                 githubLink={
                   "https://github.com/Wazotik/heart-watch-DeltaHacks8-2021"
@@ -159,7 +174,7 @@ const IndexPage = () => {
                 pathToImg={spacestgramScreenshot}
                 title={"Spacestagram"}
                 desc={
-                  "Web app that makes use of NASA's Astrology Picture of the Day Image API to display likeable collections of images alongside their appropriate metadata"
+                  "Web app that makes use of NASA's Astrology Picture of the Day Image API to display likeable collections of images alongside their appropriate metadata."
                 }
                 builtInfo={
                   "Built using JavaScript, React, Express.js, HTML, CSS."
@@ -170,14 +185,17 @@ const IndexPage = () => {
                 }
               />
             </div>
-          </Fade>
+          {/* </Fade> */}
         </div>
       </section>
 
-      <section id="skills" className="flex justify-center items-center bg-gray-800 text-white">
+      <section
+        id="skills"
+        className="flex justify-center items-center bg-gray-800 text-white"
+      >
         <div className="w-11/12 flex flex-col pt-14 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-16 lg:mb-16">
           <div className="flex flex-1 pl-52">
-            <Fade right>
+            <Fade direction="right">
               <div className="text-5xl tracking-wider lg:mb-5 text-left ">
                 Skills
               </div>
@@ -187,9 +205,7 @@ const IndexPage = () => {
           <div className="flex flex-1 justify-center">
             <h3>Under construction</h3>
           </div>
-
         </div>
-
       </section>
     </HomeLayout>
   )

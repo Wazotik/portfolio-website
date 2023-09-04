@@ -4,7 +4,7 @@ import { useState } from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { BiMenu, BiArrowBack } from "react-icons/bi"
 import { ImCross} from "react-icons/im"
-import Fade from  "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const Header = () => {
@@ -20,9 +20,10 @@ const Header = () => {
 			<nav className="fixed text-white w-[100%] flex flex-1 justify-start lg:pr-10 lg:pl-10" style={{
 				boxShadow: scrollPositionY < -800 ? "0 2px 2px -2px rgba(0,0,0,0.5)" : "none",
 				backgroundColor: scrollPositionY < -800 ? "white" : "transparent",
+				zIndex: "50",
 			}}>
 				<div className="w-[100%]">
-					<Fade top>
+					<Fade direction="down">
 					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 text-lg" style={{
 						color: scrollPositionY < -800 ? "#2b2b2b" : "white",
 						height: scrollPositionY < -800 ? "4rem" : "6rem",
@@ -42,9 +43,6 @@ const Header = () => {
 						</li>
 						<li className=" m-0">
 							<a href="#skills">Skills</a>
-						</li>
-						<li className=" m-0">
-							<Link to="/resume">Resume</Link>
 						</li>
 						</div>
 						<div className="flex flex-1"></div>
@@ -70,7 +68,7 @@ const Header = () => {
 					</div>
 				</div>
 				
-				<div className={`top-0 right-0 fixed bg-[#2b2b2b] w-[100vw] h-screen z-50 ${sidebarOpen ? "translate-x-0" : "translate-x-full"} ease-in-out duration-300`}>
+				<div className={`top-0 right-0 fixed bg-[#2b2b2b] w-[100vw] h-screen ${sidebarOpen ? "translate-x-0" : "translate-x-full"} ease-in-out duration-300`}>
 					<div className="w-full h-screen p-7 flex flex-col">
 						<div className="flex justify-end cursor-pointer">
 							<ImCross className="" onClick={() => {setSidebarOpen(!sidebarOpen)}} size={26} />
@@ -90,9 +88,6 @@ const Header = () => {
 								</li>
 								<li className="">
 									<a href="#skills" onClick={() => setSidebarOpen(!sidebarOpen)}>Skills</a>
-								</li>
-								<li className="">
-									<Link to="/resume">Resume</Link>
 								</li>
 								<li className="">
 									<Link
