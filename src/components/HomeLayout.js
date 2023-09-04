@@ -1,7 +1,7 @@
 import * as React from "react"
 import "./layout.css"
-import Footer from "./Footer"
-import Header from "./Header"
+import Footer from "./Footer.js"
+import Header from "./header.js"
 
 const HomeLayout = ({ children, visisbleHeader }) => {
 	if (typeof window !== "undefined") {

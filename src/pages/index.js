@@ -89,7 +89,7 @@ const IndexPage = () => {
               </Fade>
             </div>
             <Fade direction="up">
-              <div className="text-left text-md md:text-lg grid place-content-center">
+              <div className="text-left text-md md:t/ext-lg grid place-content-center">
                 <p className="text-white tracking-wide mb-3 md:mb-2">
                   Hey there! I'm <b>Wahaj Haider</b>, a third year computer
                   science co-op student at Toronto Metropolitan University
@@ -131,7 +131,7 @@ const IndexPage = () => {
                 pathToImg={keyboardMarketScreenshot}
                 title={"Keyboard Market"}
                 desc={
-                  "App enablings users (and myself) to explore a wide variety of mechanical keyboard products. Users can search, filter, sort and soon see reviews of products to make the search for their favourite keyboard(s) that much easier. Keyboard data is web-scraped from mechanicalkeyboards.com"
+                  "App enablings users (and myself) to explore a wide variety of mechanical keyboard products. Users can search, filter, sort and soon see reviews of products to make the search for their favourite keyboard(s) that much e.er :) Keyboard data is web-scraped from mechanicalkeyboards.com"
                 }
                 builtInfo={
                   "Built using React, Express.js, JavaScript, HTML, CSS, MySQL, and Puppeteer."
