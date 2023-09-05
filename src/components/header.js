@@ -23,43 +23,43 @@ const Header = () => {
 				zIndex: "50",
 			}}>
 				<div className="w-[100%]">
-					<Fade direction="down">
-					<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 text-lg" style={{
-						color: scrollPositionY < -800 ? "#2b2b2b" : "white",
-						height: scrollPositionY < -800 ? "4rem" : "6rem",
-						transition: "all 0.2s ease-in-out",
-					}}>
-						<div className="flex flex-1 justify-around">
-						<li className="hidden xl:block m-0">
-							<a className="" href="#home">
-								Wahaj Haider
-							</a>
-						</li>
-						<li className=" m-0">
-							<a href="#about">About</a>
-						</li>
-						<li className=" m-0">
-							<a href="#projects">Projects</a>
-						</li>
-						<li className=" m-0">
-							<a href="#skills">Skills</a>
-						</li>
-						</div>
-						<div className="flex flex-1"></div>
-						<div className="flex flex-1 justify-end">
-						<li className="m-0">
-							<Link
-								className="text-white border-solid bg-[#2b2b2b]/80 hover:bg-[#2b2b2b] p-2 pr-5 pl-5 rounded-md transition-colors duration-300"
-								href="/contact"
-								style={{
+					<Fade direction="down" className="w-[100%]">
+						<ul className="hidden w-[100%] lg:flex justify-around items-center m-0 text-lg" style={{
+							color: scrollPositionY < -800 ? "#2b2b2b" : "white",
+							height: scrollPositionY < -800 ? "4rem" : "6rem",
+							transition: "all 0.2s ease-in-out",
+						}}>
+							<div className="flex flex-1 justify-around">
+								<li className="hidden xl:block m-0">
+									<a className="" href="#home">
+										Wahaj Haider
+									</a>
+								</li>
+								<li className=" m-0">
+									<a href="#about">About</a>
+								</li>
+								<li className=" m-0">
+									<a href="#projects">Projects</a>
+								</li>
+								<li className=" m-0">
+									<a href="#skills">Skills</a>
+								</li>
+							</div>
+							<div className="flex flex-1"></div>
+							<div className="flex flex-1 justify-end">
+							<li className="m-0">
+								<Link
+									className="text-white border-solid bg-[#2b2b2b]/80 hover:bg-[#2b2b2b] p-2 pr-5 pl-5 rounded-md transition-colors duration-300"
+									href="/contact"
+									style={{
 
-								}}
-							>
-								Contact
-							</Link>
-						</li>
-						</div>
-					</ul>
+									}}
+								>
+									Contact
+								</Link>
+							</li>
+							</div>
+						</ul>
 					</Fade>
 					<div className="lg:hidden flex items-center justify-end mt-3 mb-3 mr-3 cursor-pointer" style={{
 						color: scrollPositionY < -800 ? "#2b2b2b" : "white",
