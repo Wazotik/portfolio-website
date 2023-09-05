@@ -1,17 +1,11 @@
 import * as React from "react"
-import { useState } from "react"
-import { Link } from "gatsby"
 
 import HomeLayout from "../components/HomeLayout"
-import { CgWebsite } from "react-icons/cg"
 import {
-  AiFillGithub,
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineInstagram,
 } from "react-icons/ai"
-import { HiOutlineDesktopComputer } from "react-icons/hi"
-import Seo from "../components/seo"
 import { Helmet } from "react-helmet"
 import { Fade } from "react-awesome-reveal"
 import ProjectCard from "../components/ProjectCard"

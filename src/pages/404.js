@@ -13,4 +13,4 @@ const NotFoundPage = () => (
   </HomeLayout>
 )
 
-export default NotFoundPage
+export default NotFoundPage;
