@@ -7,7 +7,7 @@ import { useState } from "react";
 import MoreInfoCard from "./MoreInfoCard";
 import Backdrop from "./Backdrop";
 
-const ProjectCard = ({ pathToImg, title, desc, builtInfo, demoLink, githubLink }) => {
+const ProjectCard = ({ pathToImg, title, generalDesc, moreInfoDesc, builtInfo, demoLink, githubLink, progessStatus }) => {
 	const [ showMoreInfo, setShowMoreInfo ] = useState(false);
 
 	const toggleProjectMoreInfoModal = () => {
@@ -23,7 +23,7 @@ const ProjectCard = ({ pathToImg, title, desc, builtInfo, demoLink, githubLink }
 
 	return (
 		<>
-			<div className="border-solid border-4 border-[#2b2b2b] w-80 h-[35rem] rounded-xl flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
+			<div className="border-2 w-80 h-[33rem] rounded-lg flex flex-col p-4 border-[#2b2b2b] hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
 				<div className="flex flex-col flex-0 justify-start items-center" onClick={toggleProjectMoreInfoModal}>
 					<img
 						className="shadow-sm mb-3 rounded-t-md"
@@ -33,7 +33,7 @@ const ProjectCard = ({ pathToImg, title, desc, builtInfo, demoLink, githubLink }
 				</div>
 				<div className="flex flex-col justify-start">
 					<h4 className="mb-1 mt-1 text-lg leading-5">{title}</h4>
-					<p className="mt-3 mb-0 text-md">{desc}</p>
+					<p className="mt-3 mb-0 text-md">{generalDesc}</p>
 				</div>
 				<div className="flex flex-1 mb-3 items-end justify-start text-[16px]">
 					<b>{builtInfo}</b>
@@ -61,7 +61,7 @@ const ProjectCard = ({ pathToImg, title, desc, builtInfo, demoLink, githubLink }
 					</a>
 				</div>
 			</div>
-			{ showMoreInfo ? <MoreInfoCard close={toggleProjectMoreInfoModal}  /> : null }
+			{ showMoreInfo ? <MoreInfoCard close={toggleProjectMoreInfoModal} moreInfoDesc={moreInfoDesc}  /> : null }
 		</>
 	);
 };

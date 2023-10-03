@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState, useEffect } from "react"
 
 import HomeLayout from "../components/HomeLayout"
 import {
@@ -47,7 +48,102 @@ const frameworkNameAndIcon = {
 	Bootstrap: <img src={BootstrapLogo} alt="react logo" className="mb-0" />,
 };
 
+const projectObjs = [
+	{
+		title: "KMarket",
+		pathToImg: keyboardMarketScreenshot,
+		generalDesc: "Web app enabling users to explore a wide variety of mechanical keyboards. Users can search, filter, sort and see reviews to make the search for their favourite keyboard(s) that much easier :)",
+		moreInfoDesc: "yap",
+		builtInfo: "Built using React, Express.js, MySQL, JavaScript, HTML, CSS, and Puppeteer.",
+		demoLink: "https://keyboard-market.netlify.app/",
+		githubLink: "https://github.com/Wazotik/keyboard-market",
+		progressStatus: "building",
+	},
+	{
+		title: "Weather App",
+		pathToImg: reactGuideScreenshot,
+		generalDesc: "Web app using the OpenWeatherMap API to provide users real-time weather data and weekly forecasts based on their location.",
+		moreInfoDesc: " This was a demo page for a school project, serving as a beginner's guide to React.js and Express.js.",
+		builtInfo: "Built using React, Express.js, JavaScript, HTML, CSS.",
+		demoLink: "https://cps530-final-project.netlify.app/demo",
+		githubLink: "https://github.com/Ghazalmir/React-and-Express-Guide",
+		progressStatus: "finished",
+	},
+	{
+		title: "Heart-Watch",
+		pathToImg: heartWatchScreenshot,
+		generalDesc: "Website providing an overview for Heart-Watch, a mobile application providing a modern solution for cardiovascular disease prevention and protection. This was used as a demo page for the DeltaHacks8 hackathon.",
+		moreInfoDesc: "yap",
+		builtInfo: "Built using JavaScript, Gatsby (React), HTML, and CSS.",
+		demoLink: "https://heartwatch.tech/",
+		githubLink: "https://github.com/Wazotik/heart-watch-DeltaHacks8-2021",
+		progressStatus: "finished",
+	},
+	{
+		title: "Spacestagram",
+		pathToImg: spacestgramScreenshot,
+		generalDesc: "Web app that makes use of NASA's Astrology Picture of the Day Image API to display likeable collections of images alongside their appropriate metadata.",
+		moreInfoDesc: "yap",
+		builtInfo: "Built using JavaScript, React, Express.js, HTML, CSS.",
+		demoLink: "https://spacestagram-wahaj.netlify.app/",
+		githubLink: "https://github.com/Wazotik/spacestagram-shopify-challenge",
+		progressStatus: "finished",
+	},
+];
+
+
 const IndexPage = () => {
+	const [projectElems, setProjectElems] = useState([]);
+	const [filterOption, setFilterOption] = useState("");
+
+	useEffect(() => {
+		setProjectElems(projectObjs.map((project) => {
+			return (
+				<ProjectCard 
+					pathToImg={project.pathToImg}  
+					title={project.title}
+					generalDesc={project.generalDesc}
+					moreInfoDesc={project.moreInfoDesc}
+					builtInfo={project.builtInfo}
+					demoLink={project.demoLink}
+					githubLink={project.githubLink}
+					progressStatus={project.progressStatus}
+				/>
+			);
+		}));
+	}, []);
+
+	const filterProjects = (filter) => {
+		setFilterOption(filter);
+		let filteredProjects = projectObjs;
+		if (filter === "all") {
+			filteredProjects = projectObjs;
+		}
+		else if (filter === "finished") {
+			filteredProjects = filteredProjects.filter((project) => project.progressStatus === "finished");
+		}
+		else if (filter === "building") {
+			filteredProjects = filteredProjects.filter((project) => project.progressStatus === "building");
+		}
+
+
+		setProjectElems(filteredProjects.map((project) => {
+			return (
+				<ProjectCard 
+					pathToImg={project.pathToImg}  
+					title={project.title}
+					generalDesc={project.generalDesc}
+					moreInfoDesc={project.moreInfoDesc}
+					builtInfo={project.builtInfo}
+					demoLink={project.demoLink}
+					githubLink={project.githubLink}
+					progressStatus={project.progressStatus}
+				/>
+			);
+		}));
+	}
+
+	
 	return (
 		<HomeLayout visisbleHeader={true}>
 			{/* <Seo title={"Wahaj Haider"} /> */}
@@ -140,74 +236,24 @@ const IndexPage = () => {
 				id="projects"
 				className="bg-white flex justify-center items-center"
 			>
-				<div className="w-11/12 flex flex-col justify-center items-center pt-24 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-10 lg:mb-16">
+				<div className="w-11/12 flex flex-col justify-center items-center pt-24 pb-14 md:pt-24 md:pb-24 gap-8 lg:mt-10 lg:mb-16">
 					<Fade direction="left">
-						<div className="text-5xl tracking-wider lg:mb-5 text-center">
+						<div className="text-5xl tracking-wider text-center">
 							Projects
 						</div>
 					</Fade>
 
-					{/* <Fade direction="up"> */}
-					<div className="inline-grid w-full gap-0 gap-y-10 grid-cols-1 place-items-center xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2">
-						<ProjectCard
-							pathToImg={keyboardMarketScreenshot}
-							title={"Keyboard Market"}
-							desc={
-								"App enabling users to explore a wide variety of mechanical keyboards. Users can search, filter, sort and see reviews to make the search for their favourite keyboard(s) that much easier :) Keyboard data is web-scraped from mechanicalkeyboards.com"
-							}
-							builtInfo={
-								"Built using React, Express.js, JavaScript, HTML, CSS, MySQL, and Puppeteer."
-							}
-							demoLink={"https://keyboard-market.netlify.app/"}
-							githubLink={"https://github.com/Wazotik/keyboard-market"}
-						/>
-
-						<ProjectCard
-							pathToImg={reactGuideScreenshot}
-							title={"Weather app (inside React and Express Guide"}
-							desc={
-								"A full-stack application proving users real-time weather data based on their location. This was a demo page for a school project, serving as a beginner's guide to React.js and Express.js."
-							}
-							builtInfo={
-								"Built using React, Express.js, JavaScript, HTML, CSS, and the OpenWeatherMap API."
-							}
-							demoLink={"https://cps530-final-project.netlify.app/demo"}
-							githubLink={
-								"https://github.com/Ghazalmir/React-and-Express-Guide"
-							}
-						/>
-
-						<ProjectCard
-							pathToImg={heartWatchScreenshot}
-							title={"Heart-Watch"}
-							desc={
-								"This website provides an overview for Heart-Watch, a mobile application providing a modern solution for cardiovascular disease prevention and protection. This was used as a demo page for our hack in DeltaHacks8."
-							}
-							builtInfo={
-								"Built using JavaScript, Gatsby (React), HTML, and CSS."
-							}
-							demoLink={"https://heartwatch.tech/"}
-							githubLink={
-								"https://github.com/Wazotik/heart-watch-DeltaHacks8-2021"
-							}
-						/>
-
-						<ProjectCard
-							pathToImg={spacestgramScreenshot}
-							title={"Spacestagram"}
-							desc={
-								"Web app that makes use of NASA's Astrology Picture of the Day Image API to display likeable collections of images alongside their appropriate metadata."
-							}
-							builtInfo={
-								"Built using JavaScript, React, Express.js, HTML, CSS."
-							}
-							demoLink={"https://spacestagram-wahaj.netlify.app/"}
-							githubLink={
-								"https://github.com/Wazotik/spacestagram-shopify-challenge"
-							}
-						/>
+					<div className="w-full flex justify-start pl-8">
+						<select value={filterOption} defaultValue="all" onChange={(event) => filterProjects(event.target.value)} className="border-2 border-[#2b2b2b] text-gray-900 text-sm rounded-md p-2.5" name="project-status" id="project-status">
+							<option value="all">all</option>
+							<option value="finished">finished</option>
+							<option value="building">"finished"</option>
+						</select>
 					</div>
-					{/* </Fade> */}
+
+					<div className="inline-grid w-full gap-0 gap-y-10 grid-cols-1 place-items-center xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2">
+						{projectElems}
+					</div>
 				</div>
 			</section>
 
