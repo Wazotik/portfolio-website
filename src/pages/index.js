@@ -113,6 +113,10 @@ const IndexPage = () => {
 		}));
 	}, []);
 
+
+	/*
+		Filter projects based on where they are in the development process
+	*/
 	const filterProjects = (filter) => {
 		setFilterOption(filter);
 		let filteredProjects = projectObjs;
@@ -125,7 +129,12 @@ const IndexPage = () => {
 		else if (filter === "building") {
 			filteredProjects = filteredProjects.filter((project) => project.progressStatus === "building");
 		}
-
+		else if (filter === "upcoming") {
+			filteredProjects = filteredProjects.filter((project) => project.progressStatus === "upcoming");
+		}
+		else {
+			console.error("INCORRECT FILTER SELECTION");
+		}
 
 		setProjectElems(filteredProjects.map((project) => {
 			return (
@@ -234,23 +243,28 @@ const IndexPage = () => {
 			</section>
 			<section
 				id="projects"
-				className="bg-white flex justify-center items-center"
+				className="bg-white flex justify-center items-start h-screen"
 			>
-				<div className="w-11/12 flex flex-col justify-center items-center pt-24 pb-14 md:pt-24 md:pb-24 gap-8 lg:mt-10 lg:mb-16">
-					<Fade direction="left">
-						<div className="text-5xl tracking-wider text-center">
-							Projects
+				<div className="w-11/12 flex flex-col justify-center items-center pt-24 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-10 lg:mb-16">
+					<div className="relative w-full mb-10">
+						<div className="pl-8 absolute left-0">
+							<select value={filterOption} defaultValue="all" onChange={(event) => filterProjects(event.target.value)} className="border-2 border-[#2b2b2b] text-gray-900 text-sm rounded-md p-2.5" name="project-status" id="project-status">
+								<option value="all">all</option>
+								<option value="finished">finished</option>
+								<option value="building">"finished"</option>
+								<option value="upcoming">upcoming</option>
+							</select>
 						</div>
-					</Fade>
 
-					<div className="w-full flex justify-start pl-8">
-						<select value={filterOption} defaultValue="all" onChange={(event) => filterProjects(event.target.value)} className="border-2 border-[#2b2b2b] text-gray-900 text-sm rounded-md p-2.5" name="project-status" id="project-status">
-							<option value="all">all</option>
-							<option value="finished">finished</option>
-							<option value="building">"finished"</option>
-						</select>
+						<div className="flex justify-center">
+							<Fade direction="left">
+								<div className="text-5xl tracking-wider text-center">
+									Projects
+								</div>
+							</Fade>
+						</div>
+
 					</div>
-
 					<div className="inline-grid w-full gap-0 gap-y-10 grid-cols-1 place-items-center xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2">
 						{projectElems}
 					</div>
