@@ -163,6 +163,7 @@ const IndexPage = () => {
 					name="description"
 					content="Wahaj Haider's personal portfolio website"
 				/>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Helmet>
 
 			<div
@@ -199,7 +200,7 @@ const IndexPage = () => {
 
 			<section
 				id="about"
-				className="bg-[#2b2b2b] flex justify-center items-center text-white font-karla h-screen"
+				className="bg-[#2b2b2b] flex justify-center items-center text-white font-karla lg:min-h-screen md:min-h-screen sm:h-96 w-full" 
 			>
 				<div className="w-10/12 xl:w-8/12 flex flex-col lg:flex-row xl:flex-row justify-center items-center pt-24 pb-14 2xl:pt-40 2xl:pb-40 gap-14 lg:gap-20 lg:mt-20 lg:mb-20">
 					<div className="grid place-content-center">
@@ -243,18 +244,10 @@ const IndexPage = () => {
 			</section>
 			<section
 				id="projects"
-				className="bg-white flex justify-center items-start h-screen"
+				className="bg-white flex justify-center items-start min-h-screen"
 			>
-				<div className="w-11/12 flex flex-col justify-center items-center pt-24 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-10 lg:mb-16">
-					<div className="relative w-full mb-10">
-						<div className="pl-8 absolute left-0">
-							<select value={filterOption} defaultValue="all" onChange={(event) => filterProjects(event.target.value)} className="border-2 border-[#2b2b2b] text-gray-900 text-sm rounded-md p-2.5" name="project-status" id="project-status">
-								<option value="all">all</option>
-								<option value="finished">finished</option>
-								<option value="building">"finished"</option>
-								<option value="upcoming">upcoming</option>
-							</select>
-						</div>
+				<div className="w-11/12 flex flex-col justify-center items-center pt-24 pb-14 md:pt-24 md:pb-24 lg:gap-10 gap-5 lg:mt-10 lg:mb-16">
+					<div className="relative w-full lg:mb-10 md:mb-10 sm:flex sm:flex-col">
 
 						<div className="flex justify-center">
 							<Fade direction="left">
@@ -262,6 +255,14 @@ const IndexPage = () => {
 									Projects
 								</div>
 							</Fade>
+						</div>
+						<div className="lg:pl-8 lg:absolute lg:left-0 flex justify-center lg:mt-4 mt-10">
+							<select value={filterOption} defaultValue="all" onChange={(event) => filterProjects(event.target.value)} className="border-2 border-[#2b2b2b] text-gray-900 text-sm rounded-md p-2.5" name="project-status" id="project-status">
+								<option value="all">all</option>
+								<option value="finished">finished</option>
+								<option value="building">"finished"</option>
+								<option value="upcoming">upcoming</option>
+							</select>
 						</div>
 
 					</div>
@@ -276,9 +277,9 @@ const IndexPage = () => {
 				className="flex justify-center items-center bg-gray-800 text-white box-border"
 			>
 				<div className="w-11/12 flex flex-col pt-24 pb-14 md:pt-24 md:pb-24 gap-10 lg:mt-16 lg:mb-16">
-					<div className="flex flex-1 pl-52">
+					<div className="flex flex-1 lg:justify-start md:justify-start justify-center lg:pl-52 md:pl-52">
 						<Fade direction="right">
-							<div className="text-5xl tracking-wider lg:mb-4 text-left ">
+							<div className="text-5xl tracking-wider lg:mb-4 text-center ">
 								Skills
 							</div>
 						</Fade>
@@ -286,17 +287,17 @@ const IndexPage = () => {
 
 					<div className="flex flex-col items-center">
 						<Fade direction="up">
-							<div className="tracking-wider text-4xl text-center mb-8">Languages</div>
+							<div className="tracking-wider text-2xl lg:text-4xl text-center mb-8">Languages</div>
 
-							<div className="flex flex-row justify-center mb-5">
+							<div className="flex flex-row flex-wrap justify-center mb-5">
 								{
 									Object.entries(languageNameAndIcon).map(([techName, techIcon]) => {
 										return (
-											<div key={techName} className="w-44 h-44 flex justify-center items-center flex-col">
-												<div className="flex justify-center w-20">
+											<div key={techName} className="lg:w-44 lg:h-44 h-32 w-44 flex justify-center items-center flex-col">
+												<div className="flex justify-center lg:w-20 w-14">
 													{techIcon}
 												</div>
-												<div className="mt-2 text-center text-lg">
+												<div className="mt-2 text-center lg:text-lg text-base">
 													{techName}
 												</div>
 											</div>
@@ -307,17 +308,17 @@ const IndexPage = () => {
 						</Fade>
 
 						<Fade direction="up">
-							<div className="tracking-wider text-4xl text-center mb-8">Frameworks/Libraries</div>
+							<div className="tracking-wider text-2xl lg:text-4xl text-center mb-8">Frameworks/Libraries</div>
 
-							<div className="flex flex-row justify-center mb-20">
+							<div className="flex flex-row flex-wrap justify-center mb-5">
 								{
 									Object.entries(frameworkNameAndIcon).map(([techName, techIcon]) => {
 										return (
-											<div key={techName} className="w-44 h-44 flex justify-center items-center flex-col">
-												<div className="flex justify-center w-20">
+											<div key={techName} className="lg:w-44 lg:h-44 h-32 w-44 flex justify-center items-center flex-col">
+												<div className="flex justify-center lg:w-20 w-14">
 													{techIcon}
 												</div>
-												<div className="mt-2 text-center text-lg">
+												<div className="mt-2 text-center lg:text-lg text-base">
 													{techName}
 												</div>
 											</div>

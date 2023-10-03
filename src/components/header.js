@@ -44,6 +44,9 @@ const Header = () => {
 								<li className=" m-0">
 									<a href="#skills">Skills</a>
 								</li>
+								<li className=" m-0">
+									<a href="#work">Work</a>
+								</li>
 							</div>
 							<div className="flex flex-1"></div>
 							<div className="flex flex-1 justify-end">
@@ -73,7 +76,7 @@ const Header = () => {
 						<div className="flex justify-end cursor-pointer">
 							<ImCross className="" onClick={() => {setSidebarOpen(!sidebarOpen)}} size={26} />
 						</div>
-						<div className="w-full flex flex-1 justify-center items-center text-center text-3xl">
+						<div className="w-full flex flex-1 justify-center items-start text-center text-3xl mt-14">
 							<ul className="m-0 flex flex-col gap-14">
 								<li className="">
 									<a className="" href="#home" onClick={() => setSidebarOpen(!sidebarOpen)}>
@@ -88,6 +91,9 @@ const Header = () => {
 								</li>
 								<li className="">
 									<a href="#skills" onClick={() => setSidebarOpen(!sidebarOpen)}>Skills</a>
+								</li>
+								<li className="">
+									<a href="#work" onClick={() => setSidebarOpen(!sidebarOpen)}>Work</a>
 								</li>
 								<li className="">
 									<Link

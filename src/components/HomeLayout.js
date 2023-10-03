@@ -8,7 +8,7 @@ const HomeLayout = ({ children, visisbleHeader }) => {
 		require("smooth-scroll")('a[href*="#"]')
 	}
 	return (
-		<div className="flex flex-col min-h-screen font-karla scroll-smooth animate-fadeIn">
+		<div className="flex flex-col min-h-screen font-karla scroll-smooth animate-fadeIn overflow-x-hidden w-[100%]">
 			{visisbleHeader ? <Header /> : <></>}
 			<div className="flex-1">{children}</div>
 			{visisbleHeader ? <Footer /> : <></>}
