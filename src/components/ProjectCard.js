@@ -10,10 +10,21 @@ import Backdrop from "./Backdrop";
 const ProjectCard = ({ pathToImg, title, desc, builtInfo, demoLink, githubLink }) => {
 	const [ showMoreInfo, setShowMoreInfo ] = useState(false);
 
+	const toggleProjectMoreInfoModal = () => {
+		setShowMoreInfo(!showMoreInfo);
+		console.log(showMoreInfo);
+		if (showMoreInfo) {
+			document.body.style.overflow = "scroll";
+		}
+		else {
+			document.body.style.overflow = "hidden";
+		}
+	}
+
 	return (
 		<>
 			<div className="border-solid border-4 border-[#2b2b2b] w-80 h-[35rem] rounded-xl flex flex-col p-4 hover:bg-[#2b2b2b] hover:text-white transition-colors duration-500">
-				<div className="flex flex-col flex-0 justify-start items-center" onClick={() => setShowMoreInfo(true)}>
+				<div className="flex flex-col flex-0 justify-start items-center" onClick={toggleProjectMoreInfoModal}>
 					<img
 						className="shadow-sm mb-3 rounded-t-md"
 						src={pathToImg}
@@ -50,7 +61,7 @@ const ProjectCard = ({ pathToImg, title, desc, builtInfo, demoLink, githubLink }
 					</a>
 				</div>
 			</div>
-			{ showMoreInfo ? <MoreInfoCard close={() => setShowMoreInfo(false)}  /> : null }
+			{ showMoreInfo ? <MoreInfoCard close={toggleProjectMoreInfoModal}  /> : null }
 		</>
 	);
 };

@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="uppercase text-md tracking-widest mb-3">
           Wahaj Haider
         </div>
-        <div className="text-sm">&copy; Copyright 2022</div>
+        <div className="text-sm">&copy; Copyright {new Date().getFullYear()}</div>
       </div>
     </>
   )
